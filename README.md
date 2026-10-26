@@ -29,6 +29,8 @@ Indirizzo previsto: **https://amplatzlukas.com/rotoclick-studio/**
 | `assets/` | Codice dell'accesso (`rc-api.js`), finestre (`rc-ui.*`), controllo export (`rc-gate.js`), back-end (`gestione.*`) |
 | `supabase/schema.sql` | Il database: tabelle, regole di accesso, tutte le funzioni |
 | `strumenti/integra.py` | Inserisce login e controllo export in una nuova versione del tool |
+| `strumenti/lingue.py` | Dizionario italiano / tedesco / inglese (genera `assets/rc-lang-data.js`) |
+| `assets/rc-i18n.js` | Tendina della lingua e traduzione della pagina |
 | `assets/anteprima-*` | Solo per la modalità anteprima (database finto nel browser) |
 
 ---
@@ -100,4 +102,7 @@ Lo script riscrive `index.html` con login, voucher e controllo export. Il codice
 - **Codici indovinabili:** i codici generati sono casuali. Se i kit vecchi hanno codici in sequenza, conviene sostituirli con codici nuovi, perché una sequenza si indovina. Il sistema blocca comunque un laboratorio dopo 10 tentativi sbagliati in un'ora.
 - **Prezzo:** 2 € a caso, 1 € al rivenditore e 10 casi per kit sono modificabili in *Impostazioni* e valgono per gli export futuri. Nell'accordo con i rivenditori conviene indicare i 2 € come **prezzo massimo** (da verificare con il consulente).
 - **Key Clinic:** di default anche l'export Key Clinic conta come caso. Si può cambiare in *Impostazioni*.
-- **Lingua:** l'interfaccia è in italiano. La versione tedesca va aggiunta prima di andare in DACH.
+- **Lingue:** tool, login e back-end sono in italiano, tedesco e inglese, con una tendina in alto a destra. La prima volta la lingua segue quella del browser, poi resta quella scelta. Il tool resta scritto in italiano: uno strato separato (`rc-i18n.js`) sostituisce i testi sullo schermo usando il dizionario in `strumenti/lingue.py`.
+  - **Nuove versioni del tool:** le frasi nuove restano in italiano finché non le aggiungi al dizionario. Aggiungi la riga `("italiano", "deutsch", "english")` in `strumenti/lingue.py` (con `{0}`, `{1}` per numeri e nomi) e lancia `python3 strumenti/lingue.py`.
+  - Restano in italiano le etichette del cubo di vista 3D (DAVANTI, DIETRO…), perché il tool le disegna dentro la scena 3D, e la parola "triangoli" accanto al nome del file caricato, perché il tool rilegge quel testo.
+  - Le email di Supabase (conferma, recupero password) vanno tradotte nei modelli email di Supabase.

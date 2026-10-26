@@ -54,7 +54,7 @@
         Account demo (password <code>anteprima</code>): <code>admin@anteprima.it</code> · <code>rivenditore@anteprima.it</code><br>
         Un laboratorio si registra da sé. Codici kit di prova ancora liberi:<br>${cod.map((c) => `<code>${RC.esc(c.codice_stampato)}</code> ${RC.esc(c.tipo)}`).join(" · ") || "nessuno (generali dal back-end)"}
         <br><button type="button" data-reset>Azzera l'anteprima</button>`;
-      d.querySelector("[data-reset]").addEventListener("click", () => { if (confirm("Cancellare tutti i dati di prova di questo browser?")) RC.resetAnteprima(); });
+      d.querySelector("[data-reset]").addEventListener("click", () => { if (confirm(RC.t("Cancellare tutti i dati di prova di questo browser?"))) RC.resetAnteprima(); });
     } catch (e) {
       d.querySelector(".in").textContent = "Anteprima non disponibile: " + e.message;
     }

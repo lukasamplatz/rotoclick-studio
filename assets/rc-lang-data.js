@@ -1,0 +1,3424 @@
+/* Generato da strumenti/lingue.py — non modificare a mano. */
+window.RC_LANG_DATA = [
+[
+"RotoClick Studio",
+"RotoClick Studio",
+"RotoClick Studio"
+],
+[
+"Key Lab · prototipo",
+"Key Lab · Prototyp",
+"Key Lab · prototype"
+],
+[
+"Import scansioni",
+"Scan-Import",
+"Import scans"
+],
+[
+"Analisi occlusione",
+"Okklusionsanalyse",
+"Occlusion analysis"
+],
+[
+"Analisi occlusione…",
+"Okklusionsanalyse…",
+"Occlusion analysis…"
+],
+[
+"Articolatore",
+"Artikulator",
+"Articulator"
+],
+[
+"Crea modelli",
+"Modelle erstellen",
+"Create models"
+],
+[
+"Indietro",
+"Zurück",
+"Back"
+],
+[
+"Avanti",
+"Weiter",
+"Next"
+],
+[
+"Superiore",
+"Oberkiefer",
+"Upper"
+],
+[
+"Inferiore",
+"Unterkiefer",
+"Lower"
+],
+[
+"Arcata superiore",
+"Oberkiefer",
+"Upper arch"
+],
+[
+"Arcata inferiore",
+"Unterkiefer",
+"Lower arch"
+],
+[
+"arcata superiore",
+"Oberkiefer",
+"upper arch"
+],
+[
+"arcata inferiore",
+"Unterkiefer",
+"lower arch"
+],
+[
+"SUP",
+"OK",
+"UPP"
+],
+[
+"INF",
+"UK",
+"LOW"
+],
+[
+"Sup",
+"OK",
+"Upper"
+],
+[
+"Inf",
+"UK",
+"Lower"
+],
+[
+"MK",
+"MK",
+"MK"
+],
+[
+"FK",
+"BG",
+"BF"
+],
+[
+"Inquadra",
+"Einpassen",
+"Fit view"
+],
+[
+"Inquadra tutto",
+"Alles einpassen",
+"Fit all"
+],
+[
+"Sezione",
+"Schnitt",
+"Section"
+],
+[
+"Viste: clicca una faccia",
+"Ansichten: auf eine Seite klicken",
+"Views: click a face"
+],
+[
+"Clic: visibile → trasparente → nascosto",
+"Klick: sichtbar → transparent → ausgeblendet",
+"Click: visible → transparent → hidden"
+],
+[
+"Nome progetto",
+"Projektname",
+"Project name"
+],
+[
+"es. ROSSI 21-10",
+"z. B. MEIER 21-10",
+"e.g. SMITH 21-10"
+],
+[
+"Scritto in rilievo sulla barra posteriore dell'attachment, sopra il codice della piastra. Lettere A–Z, numeri, spazio e - . / _",
+"Erhaben auf den hinteren Steg des Attachments geschrieben, über dem Plattencode. Buchstaben A–Z, Ziffern, Leerzeichen und - . / _",
+"Embossed on the rear bar of the attachment, above the plate code. Letters A–Z, digits, space and - . / _"
+],
+[
+"mm",
+"mm",
+"mm"
+],
+[
+"°/lato",
+"°/Seite",
+"°/side"
+],
+[
+"% lunghezza",
+"% Länge",
+"% length"
+],
+[
+"in arrivo",
+"in Kürze",
+"coming soon"
+],
+[
+"in sviluppo",
+"in Entwicklung",
+"in development"
+],
+[
+"Click",
+"Click",
+"Click"
+],
+[
+"Auto",
+"Auto",
+"Auto"
+],
+[
+"Media",
+"Mittel",
+"Medium"
+],
+[
+"Applica",
+"Anwenden",
+"Apply"
+],
+[
+"Annulla",
+"Abbrechen",
+"Cancel"
+],
+[
+"Elimina",
+"Löschen",
+"Delete"
+],
+[
+"Sposta",
+"Verschieben",
+"Move"
+],
+[
+"Ruota",
+"Drehen",
+"Rotate"
+],
+[
+"Affianca",
+"Nebeneinander",
+"Side by side"
+],
+[
+"Togli ultimo punto",
+"Letzten Punkt entfernen",
+"Remove last point"
+],
+[
+"Taglia",
+"Schneiden",
+"Cut"
+],
+[
+"Carica le scansioni intraorali già in occlusione (STL, PLY o OBJ).",
+"Intraoralscans bereits in Okklusion laden (STL, PLY oder OBJ).",
+"Load the intraoral scans already in occlusion (STL, PLY or OBJ)."
+],
+[
+"Provenienza delle scansioni",
+"Herkunft der Scans",
+"Scan source"
+],
+[
+"Posizione delle scansioni",
+"Position der Scans",
+"Scan position"
+],
+[
+"Da scanner",
+"Vom Scanner",
+"From scanner"
+],
+[
+"Da exocad",
+"Aus exocad",
+"From exocad"
+],
+[
+"Da 3Shape",
+"Aus 3Shape",
+"From 3Shape"
+],
+[
+"tiene la posizione dell'articolatore",
+"behält die Artikulatorposition",
+"keeps the articulator position"
+],
+[
+"posizionamento nel tool",
+"Positionierung im Tool",
+"positioning in the tool"
+],
+[
+"Trascina qui il file o clicca",
+"Datei hierher ziehen oder klicken",
+"Drag the file here or click"
+],
+[
+"Ritaglia superiore",
+"OK beschneiden",
+"Trim upper"
+],
+[
+"Ritaglia inferiore",
+"UK beschneiden",
+"Trim lower"
+],
+[
+"Nessuna scansione a portata di mano? Il caso di prova ha un morso con intrusioni sul lato destro, utile per testare la fase 2.",
+"Gerade keine Scans zur Hand? Der Testfall hat einen Biss mit Durchdringungen rechts, ideal zum Testen von Schritt 2.",
+"No scans at hand? The test case has a bite with penetrations on the right side, useful for testing step 2."
+],
+[
+"Carica caso di prova",
+"Testfall laden",
+"Load test case"
+],
+[
+"Tipo di modello",
+"Modelltyp",
+"Model type"
+],
+[
+"Modello studio",
+"Studienmodell",
+"Study model"
+],
+[
+"Studio",
+"Studienmodell",
+"Study"
+],
+[
+"Su impianti",
+"Auf Implantaten",
+"On implants"
+],
+[
+"monconi RotoClick con click",
+"RotoClick-Stümpfe mit Click",
+"RotoClick dies with click"
+],
+[
+"senza monconi",
+"ohne Stümpfe",
+"without dies"
+],
+[
+"fossa attorno alla preparazione",
+"Graben um die Präparation",
+"ditch around the preparation"
+],
+[
+"Lettura {0}",
+"Lese {0}",
+"Reading {0}"
+],
+[
+"Formato non supportato: {0}. Usa STL, PLY o OBJ.",
+"Format nicht unterstützt: {0}. Bitte STL, PLY oder OBJ verwenden.",
+"Format not supported: {0}. Use STL, PLY or OBJ."
+],
+[
+"Le scansioni non sembrano nell'articolatore exocad (centro spostato di {0} mm, piano occlusale {1} mm): esportale da exocad con la posizione dell'articolatore oppure scegli «Da scanner».",
+"Die Scans scheinen nicht im exocad-Artikulator zu liegen (Zentrum um {0} mm verschoben, Okklusionsebene {1} mm): aus exocad mit Artikulatorposition exportieren oder «Vom Scanner» wählen.",
+"The scans do not seem to be in the exocad articulator (centre offset {0} mm, occlusal plane {1} mm): export them from exocad with the articulator position or choose “From scanner”."
+],
+[
+"Posizione dell'articolatore exocad mantenuta: nella fase Articolatore puoi comunque ritoccarla a mano.",
+"exocad-Artikulatorposition übernommen: im Schritt Artikulator kannst du sie trotzdem von Hand anpassen.",
+"exocad articulator position kept: you can still fine-tune it by hand in the Articulator step."
+],
+[
+"Ritaglio",
+"Beschneiden",
+"Trim"
+],
+[
+"Ritaglio · {0}",
+"Beschneiden · {0}",
+"Trim · {0}"
+],
+[
+"Clic sinistro: punti attorno alla zona da eliminare, sul modello o nel vuoto. Clic destro: chiude il contorno e taglia tutto quello che ci sta dentro, da parte a parte. Trascina col destro per ruotare, rotellina per lo zoom.",
+"Linksklick: Punkte um den zu entfernenden Bereich setzen, auf dem Modell oder daneben. Rechtsklick: schließt die Kontur und schneidet alles darin durchgehend weg. Mit gedrückter rechter Taste drehen, Mausrad zum Zoomen.",
+"Left click: points around the area to remove, on the model or in empty space. Right click: closes the outline and cuts everything inside, all the way through. Drag with the right button to rotate, scroll wheel to zoom."
+],
+[
+"Clic sinistro per il primo punto",
+"Linksklick für den ersten Punkt",
+"Left click for the first point"
+],
+[
+"{0} punti · clic destro per tagliare",
+"{0} Punkte · Rechtsklick zum Schneiden",
+"{0} points · right click to cut"
+],
+[
+"Tieni solo l'interno del contorno",
+"Nur das Innere der Kontur behalten",
+"Keep only the inside of the outline"
+],
+[
+"Rimuovi frammenti staccati",
+"Lose Fragmente entfernen",
+"Remove loose fragments"
+],
+[
+"Annulla taglio",
+"Schnitt rückgängig",
+"Undo cut"
+],
+[
+"Fine ritaglio",
+"Beschneiden beenden",
+"Finish trimming"
+],
+[
+"Il taglio eliminerebbe tutta la scansione: annullato.",
+"Der Schnitt würde den ganzen Scan entfernen: abgebrochen.",
+"The cut would remove the whole scan: cancelled."
+],
+[
+"Nessun triangolo dentro il contorno.",
+"Keine Dreiecke innerhalb der Kontur.",
+"No triangles inside the outline."
+],
+[
+"Nessun frammento staccato.",
+"Keine losen Fragmente.",
+"No loose fragments."
+],
+[
+"Ultimo taglio annullato.",
+"Letzter Schnitt rückgängig gemacht.",
+"Last cut undone."
+],
+[
+"Distanza tra le arcate calcolata vertice per vertice.",
+"Abstand zwischen den Kiefern, Punkt für Punkt berechnet.",
+"Distance between the arches, computed vertex by vertex."
+],
+[
+"Intrusione oltre 0,10 mm",
+"Durchdringung über 0,10 mm",
+"Penetration over 0.10 mm"
+],
+[
+"Intrusione 0,02–0,10 mm",
+"Durchdringung 0,02–0,10 mm",
+"Penetration 0.02–0.10 mm"
+],
+[
+"Contatto (−0,02 / +0,05 mm)",
+"Kontakt (−0,02 / +0,05 mm)",
+"Contact (−0.02 / +0.05 mm)"
+],
+[
+"Vicino (0,05–0,20 mm)",
+"Nahe (0,05–0,20 mm)",
+"Close (0.05–0.20 mm)"
+],
+[
+"Intrusione massima",
+"Maximale Durchdringung",
+"Maximum penetration"
+],
+[
+"Punti in intrusione",
+"Punkte mit Durchdringung",
+"Penetrating points"
+],
+[
+"Punti di contatto",
+"Kontaktpunkte",
+"Contact points"
+],
+[
+"Morso aperto, distanza minima",
+"Offener Biss, minimaler Abstand",
+"Open bite, minimum distance"
+],
+[
+"Morso",
+"Biss",
+"Bite"
+],
+[
+"chiuso",
+"geschlossen",
+"closed"
+],
+[
+"Cosa fare",
+"Vorgehen",
+"What to do"
+],
+[
+"Lascia com'è",
+"So lassen",
+"Leave as is"
+],
+[
+"Le scansioni restano invariate.",
+"Die Scans bleiben unverändert.",
+"The scans stay unchanged."
+],
+[
+"Taglia intrusioni",
+"Durchdringungen abtragen",
+"Cut penetrations"
+],
+[
+"Le superfici che si compenetrano vengono riportate al contatto.",
+"Sich durchdringende Flächen werden auf Kontakt zurückgesetzt.",
+"Interpenetrating surfaces are brought back to contact."
+],
+[
+"Dove togliere materiale",
+"Wo Material abtragen",
+"Where to remove material"
+],
+[
+"Metà per arcata",
+"Je zur Hälfte",
+"Half per arch"
+],
+[
+"Trova massima intercuspidazione",
+"Maximale Interkuspidation finden",
+"Find maximum intercuspation"
+],
+[
+"La mandibola si sposta come corpo rigido fino a contatti stabili, senza deformare le scansioni.",
+"Der Unterkiefer bewegt sich als starrer Körper bis zu stabilen Kontakten, ohne die Scans zu verformen.",
+"The mandible moves as a rigid body to stable contacts, without deforming the scans."
+],
+[
+"Ripristina originale",
+"Original wiederherstellen",
+"Restore original"
+],
+[
+"Scansioni lasciate invariate.",
+"Scans unverändert gelassen.",
+"Scans left unchanged."
+],
+[
+"Scansioni originali ripristinate.",
+"Original-Scans wiederhergestellt.",
+"Original scans restored."
+],
+[
+"Intrusioni tagliate. Intrusione massima da {0} a {1} mm.",
+"Durchdringungen abgetragen. Maximale Durchdringung von {0} auf {1} mm.",
+"Penetrations cut. Maximum penetration from {0} to {1} mm."
+],
+[
+"Taglio intrusioni…",
+"Durchdringungen abtragen…",
+"Cutting penetrations…"
+],
+[
+"Taglio intrusioni",
+"Durchdringungen abtragen",
+"Cutting penetrations"
+],
+[
+"Massima intercuspidazione…",
+"Maximale Interkuspidation…",
+"Maximum intercuspation…"
+],
+[
+"Massima intercuspidazione",
+"Maximale Interkuspidation",
+"Maximum intercuspation"
+],
+[
+"Mandibola spostata di",
+"Unterkiefer verschoben um",
+"Mandible moved by"
+],
+[
+"e ruotata di",
+"und gedreht um",
+"and rotated by"
+],
+[
+". Controlla i contatti sulla mappa colori.",
+". Kontakte auf der Farbkarte prüfen.",
+". Check the contacts on the colour map."
+],
+[
+"Controlla i contatti sulla mappa colori.",
+"Kontakte auf der Farbkarte prüfen.",
+"Check the contacts on the colour map."
+],
+[
+". Spostamento ampio: verifica che la registrazione di partenza fosse plausibile.",
+". Große Verschiebung: prüfen, ob die Ausgangsregistrierung plausibel war.",
+". Large shift: check that the starting registration was plausible."
+],
+[
+"Spostamento ampio: verifica che la registrazione di partenza fosse plausibile.",
+"Große Verschiebung: prüfen, ob die Ausgangsregistrierung plausibel war.",
+"Large shift: check that the starting registration was plausible."
+],
+[
+"Posiziona le scansioni tra le piastre. Le due arcate si muovono sempre come un blocco unico.",
+"Scans zwischen den Platten positionieren. Beide Kiefer bewegen sich immer als ein Block.",
+"Position the scans between the plates. Both arches always move as one block."
+],
+[
+"Piastre",
+"Platten",
+"Plates"
+],
+[
+"Piastra superiore",
+"Obere Platte",
+"Upper plate"
+],
+[
+"Piastra inferiore",
+"Untere Platte",
+"Lower plate"
+],
+[
+"Posizionamento manuale",
+"Manuelle Positionierung",
+"Manual positioning"
+],
+[
+"Allinea al piano occlusale",
+"An Okklusionsebene ausrichten",
+"Align to occlusal plane"
+],
+[
+"Piano occlusale",
+"Okklusionsebene",
+"Occlusal plane"
+],
+[
+"Altezza scansione sup / disponibile",
+"Scanhöhe OK / verfügbar",
+"Upper scan height / available"
+],
+[
+"Altezza scansione inf / disponibile",
+"Scanhöhe UK / verfügbar",
+"Lower scan height / available"
+],
+[
+"Scostamento dal centro arcata X / Y",
+"Abweichung von der Bogenmitte X / Y",
+"Offset from arch centre X / Y"
+],
+[
+"Sporgenza oltre l'attachment",
+"Überstand über das Attachment",
+"Overhang beyond the attachment"
+],
+[
+"Usa Key Clinic",
+"Key Clinic verwenden",
+"Use Key Clinic"
+],
+[
+"Posiziona le arcate con l'arco facciale ed esporta le scansioni orientate.",
+"Kiefer mit dem Gesichtsbogen positionieren und die ausgerichteten Scans exportieren.",
+"Position the arches with the face-bow and export the oriented scans."
+],
+[
+"Marker",
+"Marker",
+"Marker"
+],
+[
+"SMALL",
+"SMALL",
+"SMALL"
+],
+[
+"STANDARD",
+"STANDARD",
+"STANDARD"
+],
+[
+"BIG",
+"BIG",
+"BIG"
+],
+[
+"Scansione marker (con forchetta, ed eventuali denti già uniti)",
+"Marker-Scan (mit Bissgabel und ggf. bereits verbundenen Zähnen)",
+"Marker scan (with bite fork, and any teeth already joined)"
+],
+[
+"Ritaglia scansione marker",
+"Marker-Scan beschneiden",
+"Trim marker scan"
+],
+[
+"Scansione forchetta in bocca · opzionale",
+"Bissgabel-Scan im Mund · optional",
+"Bite fork scan in the mouth · optional"
+],
+[
+"Ritaglia scansione forchetta",
+"Bissgabel-Scan beschneiden",
+"Trim bite fork scan"
+],
+[
+"Carica caso di prova Key Clinic",
+"Key-Clinic-Testfall laden",
+"Load Key Clinic test case"
+],
+[
+"A · Marker",
+"A · Marker",
+"A · Marker"
+],
+[
+"B · Forchetta",
+"B · Bissgabel",
+"B · Bite fork"
+],
+[
+"C · Arcate",
+"C · Kiefer",
+"C · Arches"
+],
+[
+"scansione marker → libreria",
+"Marker-Scan → Bibliothek",
+"marker scan → library"
+],
+[
+"scansione forchetta → scansione marker",
+"Bissgabel-Scan → Marker-Scan",
+"bite fork scan → marker scan"
+],
+[
+"solo se la forchetta è una scansione separata",
+"nur wenn die Bissgabel ein eigener Scan ist",
+"only if the bite fork is a separate scan"
+],
+[
+"arcata superiore →",
+"Oberkiefer →",
+"upper arch →"
+],
+[
+"scansione marker",
+"Marker-Scan",
+"marker scan"
+],
+[
+"scansione forchetta",
+"Bissgabel-Scan",
+"bite fork scan"
+],
+[
+"3 punti + best-fit",
+"3 Punkte + Best-Fit",
+"3 points + best fit"
+],
+[
+"Nascondi scansioni KC",
+"KC-Scans ausblenden",
+"Hide KC scans"
+],
+[
+"Mostra scansioni KC",
+"KC-Scans einblenden",
+"Show KC scans"
+],
+[
+"Esporta scansioni",
+"Scans exportieren",
+"Export scans"
+],
+[
+"Le scansioni superiore e inferiore con l'orientamento attuale (Key Clinic), non i modelli.",
+"OK- und UK-Scan in der aktuellen Ausrichtung (Key Clinic), nicht die Modelle.",
+"The upper and lower scans in their current orientation (Key Clinic), not the models."
+],
+[
+"Scansioni per exocad (STL)",
+"Scans für exocad (STL)",
+"Scans for exocad (STL)"
+],
+[
+"Scansioni per 3Shape",
+"Scans für 3Shape",
+"Scans for 3Shape"
+],
+[
+"Da definire la trasformazione verso l'articolatore 3Shape",
+"Transformation zum 3Shape-Artikulator noch festzulegen",
+"Transformation to the 3Shape articulator still to be defined"
+],
+[
+"Serve un caso di riferimento esportato da 3Shape per definire la trasformazione",
+"Für die Transformation wird ein aus 3Shape exportierter Referenzfall benötigt",
+"A reference case exported from 3Shape is needed to define the transformation"
+],
+[
+"Carico marker…",
+"Marker wird geladen…",
+"Loading marker…"
+],
+[
+"Carico marker",
+"Marker wird geladen",
+"Loading marker"
+],
+[
+"Preparo il caso di prova Key Clinic…",
+"Key-Clinic-Testfall wird vorbereitet…",
+"Preparing the Key Clinic test case…"
+],
+[
+"Preparo il caso di prova Key Clinic",
+"Key-Clinic-Testfall wird vorbereitet",
+"Preparing the Key Clinic test case"
+],
+[
+"Caso di prova caricato: marker vero (STANDARD) con forchetta e denti frontali sintetici, ogni scansione in una posizione casuale. Fai A, B e C: alla fine vedi di quanto ti discosti dalla posizione vera.",
+"Testfall geladen: echter Marker (STANDARD) mit Bissgabel und synthetischen Frontzähnen, jeder Scan in zufälliger Position. A, B und C durchführen: am Ende siehst du, wie weit du von der echten Position abweichst.",
+"Test case loaded: real marker (STANDARD) with bite fork and synthetic front teeth, each scan in a random position. Do A, B and C: at the end you see how far you are from the true position."
+],
+[
+"Carica prima le arcate (fase 1), anche il caso di prova.",
+"Zuerst die Kiefer laden (Schritt 1), auch der Testfall geht.",
+"Load the arches first (step 1), the test case works too."
+],
+[
+"Matching {0} · punto",
+"Matching {0} · Punkt",
+"Matching {0} · point"
+],
+[
+"({0}) sulla",
+"({0}) auf",
+"({0}) on the"
+],
+[
+"rosso",
+"rot",
+"red"
+],
+[
+"verde",
+"grün",
+"green"
+],
+[
+"blu",
+"blau",
+"blue"
+],
+[
+". Stessi punti, stesso ordine.",
+". Gleiche Punkte, gleiche Reihenfolge.",
+". Same points, same order."
+],
+[
+"Stessi punti, stesso ordine.",
+"Gleiche Punkte, gleiche Reihenfolge.",
+"Same points, same order."
+],
+[
+"Sposta / Ruota muovono la scansione marker per avvicinarla alla vista dell'altra; i punti già messi la seguono.",
+"Verschieben / Drehen bewegt den Marker-Scan näher an die Ansicht des anderen; bereits gesetzte Punkte folgen mit.",
+"Move / Rotate shift the marker scan closer to the view of the other; points already placed follow it."
+],
+[
+"Sposta / Ruota muovono la scansione forchetta per avvicinarla alla vista dell'altra; i punti già messi la seguono.",
+"Verschieben / Drehen bewegt den Bissgabel-Scan näher an die Ansicht des anderen; bereits gesetzte Punkte folgen mit.",
+"Move / Rotate shift the bite fork scan closer to the view of the other; points already placed follow it."
+],
+[
+"Sposta / Ruota muovono la {0} per avvicinarla alla vista dell'altra; i punti già messi la seguono.",
+"Verschieben / Drehen bewegt {0} näher an die Ansicht des anderen; bereits gesetzte Punkte folgen mit.",
+"Move / Rotate shift the {0} closer to the view of the other; points already placed follow it."
+],
+[
+"Selezione annullata.",
+"Auswahl abgebrochen.",
+"Selection cancelled."
+],
+[
+"Matching {0}: troppo poca zona in comune dopo i 3 punti. Ripeti scegliendo punti più precisi.",
+"Matching {0}: nach den 3 Punkten zu wenig gemeinsamer Bereich. Mit genaueren Punkten wiederholen.",
+"Matching {0}: too little common area after the 3 points. Repeat with more precise points."
+],
+[
+"Scansione marker sulla libreria {0}: deviazione media",
+"Marker-Scan auf Bibliothek {0}: mittlere Abweichung",
+"Marker scan on library {0}: mean deviation"
+],
+[
+"Scansione forchetta sulla scansione marker: deviazione media",
+"Bissgabel-Scan auf Marker-Scan: mittlere Abweichung",
+"Bite fork scan on marker scan: mean deviation"
+],
+[
+"Arcate sulla scansione forchetta (blocco unico): deviazione media",
+"Kiefer auf Bissgabel-Scan (ein Block): mittlere Abweichung",
+"Arches on bite fork scan (single block): mean deviation"
+],
+[
+"Arcate sulla scansione marker (blocco unico): deviazione media",
+"Kiefer auf Marker-Scan (ein Block): mittlere Abweichung",
+"Arches on marker scan (single block): mean deviation"
+],
+[
+"su {0} punti.",
+"auf {0} Punkten.",
+"over {0} points."
+],
+[
+"Controlla la mappa colori nella zona comune.",
+"Farbkarte im gemeinsamen Bereich prüfen.",
+"Check the colour map in the common area."
+],
+[
+"Troppo alta: ripeti con punti più distanti tra loro o verifica la variante del marker.",
+"Zu hoch: mit weiter auseinanderliegenden Punkten wiederholen oder die Marker-Variante prüfen.",
+"Too high: repeat with points further apart or check the marker variant."
+],
+[
+"Troppo alta: ripeti con punti più distanti tra loro.",
+"Zu hoch: mit weiter auseinanderliegenden Punkten wiederholen.",
+"Too high: repeat with points further apart."
+],
+[
+"Ora il matching B (forchetta).",
+"Jetzt Matching B (Bissgabel).",
+"Now matching B (bite fork)."
+],
+[
+"Ora il matching C (arcate), oppure carica la scansione forchetta se è separata.",
+"Jetzt Matching C (Kiefer), oder den Bissgabel-Scan laden, falls separat.",
+"Now matching C (arches), or load the bite fork scan if it is separate."
+],
+[
+"Ora il matching C (arcate).",
+"Jetzt Matching C (Kiefer).",
+"Now matching C (arches)."
+],
+[
+"Le arcate sono nella posizione dell'arco facciale, in coordinate articolatore.",
+"Die Kiefer stehen in der Gesichtsbogenposition, in Artikulatorkoordinaten.",
+"The arches are in the face-bow position, in articulator coordinates."
+],
+[
+"Caso di prova",
+"Testfall",
+"Test case"
+],
+[
+": scostamento dalla posizione vera medio",
+": mittlere Abweichung von der echten Position",
+": mean deviation from the true position"
+],
+[
+", massimo",
+", maximal",
+", maximum"
+],
+[
+"Best-fit sul marker…",
+"Best-Fit auf den Marker…",
+"Best fit on the marker…"
+],
+[
+"Best-fit sul marker",
+"Best-Fit auf den Marker",
+"Best fit on the marker"
+],
+[
+"Best-fit forchetta…",
+"Best-Fit Bissgabel…",
+"Best fit bite fork…"
+],
+[
+"Best-fit forchetta",
+"Best-Fit Bissgabel",
+"Best fit bite fork"
+],
+[
+"Best-fit arcate…",
+"Best-Fit Kiefer…",
+"Best fit arches…"
+],
+[
+"Best-fit arcate",
+"Best-Fit Kiefer",
+"Best fit arches"
+],
+[
+"I 3 punti sono quasi in linea: la rotazione non è determinata. Distanziali di più",
+"Die 3 Punkte liegen fast auf einer Linie: die Drehung ist nicht bestimmt. Weiter auseinander setzen",
+"The 3 points are almost in line: the rotation is undetermined. Space them further apart"
+],
+[
+"Libreria marker non caricata: il file del tool è incompleto. Scaricalo di nuovo.",
+"Marker-Bibliothek nicht geladen: die Tool-Datei ist unvollständig. Bitte neu herunterladen.",
+"Marker library not loaded: the tool file is incomplete. Download it again."
+],
+[
+"libreria marker (grigio scuro)",
+"Marker-Bibliothek (dunkelgrau)",
+"marker library (dark grey)"
+],
+[
+"scansione marker (denti frontali)",
+"Marker-Scan (Frontzähne)",
+"marker scan (front teeth)"
+],
+[
+"scansione forchetta (denti frontali)",
+"Bissgabel-Scan (Frontzähne)",
+"bite fork scan (front teeth)"
+],
+[
+"scansione marker (sulla forchetta)",
+"Marker-Scan (auf der Bissgabel)",
+"marker scan (on the bite fork)"
+],
+[
+"Ricomincia dal punto 1.",
+"Bei Punkt 1 neu beginnen.",
+"Start again from point 1."
+],
+[
+"Base calcolata dalla scansione fino alla piastra della configurazione scelta.",
+"Sockel vom Scan bis zur Platte der gewählten Konfiguration berechnet.",
+"Base computed from the scan down to the plate of the chosen configuration."
+],
+[
+"Altezza modello",
+"Modellhöhe",
+"Model height"
+],
+[
+"(combinazione senza config propria: piastre da {0})",
+"(Kombination ohne eigene Konfiguration: Platten aus {0})",
+"(combination without its own config: plates from {0})"
+],
+[
+"Attachment",
+"Attachment",
+"Attachment"
+],
+[
+"BASE_V7",
+"BASE_V7",
+"BASE_V7"
+],
+[
+"DRAIN-HOLES",
+"DRAIN-HOLES",
+"DRAIN-HOLES"
+],
+[
+"Riempimento",
+"Füllung",
+"Infill"
+],
+[
+"Nido d'ape",
+"Wabe",
+"Honeycomb"
+],
+[
+"Cavo",
+"Hohl",
+"Hollow"
+],
+[
+"Pieno",
+"Massiv",
+"Solid"
+],
+[
+"Spessore parete",
+"Wandstärke",
+"Wall thickness"
+],
+[
+"Spessore nervature",
+"Rippenstärke",
+"Rib thickness"
+],
+[
+"Celle da 7,55 mm allineate al nido d'ape dell'attachment.",
+"Zellen à 7,55 mm, an der Wabe des Attachments ausgerichtet.",
+"7.55 mm cells aligned with the attachment honeycomb."
+],
+[
+"Monconi sfilabili",
+"Herausnehmbare Stümpfe",
+"Removable dies"
+],
+[
+"Tipo di moncone",
+"Stumpftyp",
+"Die type"
+],
+[
+"Classico",
+"Klassisch",
+"Classic"
+],
+[
+"Con binari",
+"Mit Schienen",
+"With rails"
+],
+[
+"Con binari click",
+"Mit Schienen und Click",
+"With rails and click"
+],
+[
+"classici, con binari o con click",
+"klassisch, mit Schienen oder mit Click",
+"classic, with rails or with click"
+],
+[
+"Senza binari: il moncone si centra sul corpo con la forma del margine e appoggia sul fianco a 45°.",
+"Ohne Schienen: der Stumpf zentriert sich über den Körper in Form der Präparationsgrenze und liegt auf der 45°-Flanke auf.",
+"No rails: the die centres on the body shaped like the margin and seats on the 45° flank."
+],
+[
+"Due binari guidano l'inserimento (largo vestibolare, stretto linguale), senza click.",
+"Zwei Schienen führen das Einsetzen (breit vestibulär, schmal lingual), ohne Click.",
+"Two rails guide the insertion (wide buccal, narrow lingual), without click."
+],
+[
+"Due binari guidano l'inserimento; il binario linguale ha un click che trattiene il moncone in sede.",
+"Zwei Schienen führen das Einsetzen; die linguale Schiene hat einen Click, der den Stumpf in Position hält.",
+"Two rails guide the insertion; the lingual rail has a click that holds the die in place."
+],
+[
+"Ditching",
+"Ditching",
+"Ditching"
+],
+[
+"+ Moncone superiore",
+"+ Stumpf OK",
+"+ Upper die"
+],
+[
+"+ Moncone inferiore",
+"+ Stumpf UK",
+"+ Lower die"
+],
+[
+"+ Margine superiore",
+"+ Präparationsgrenze OK",
+"+ Upper margin"
+],
+[
+"+ Margine inferiore",
+"+ Präparationsgrenze UK",
+"+ Lower margin"
+],
+[
+"Aggancia la linea al margine",
+"Linie an der Präparationsgrenze einrasten",
+"Snap the line to the margin"
+],
+[
+"Annulla inserimento margine",
+"Eingabe der Präparationsgrenze abbrechen",
+"Cancel margin input"
+],
+[
+"Profondità della fossa sotto il margine",
+"Grabentiefe unter der Präparationsgrenze",
+"Ditch depth below the margin"
+],
+[
+"Larghezza della fossa",
+"Grabenbreite",
+"Ditch width"
+],
+[
+"Parametri monconi",
+"Stumpfparameter",
+"Die parameters"
+],
+[
+"Offset XY carota",
+"Offset XY Zapfen",
+"XY offset stem"
+],
+[
+"Offset XY binari",
+"Offset XY Schienen",
+"XY offset rails"
+],
+[
+"Offset Z appoggio",
+"Offset Z Auflage",
+"Z offset seat"
+],
+[
+"+ = il moncone appoggia più in alto (sede più stretta sul fianco 45°), − = più in basso",
+"+ = Stumpf liegt höher auf (engere Aufnahme an der 45°-Flanke), − = tiefer",
+"+ = die seats higher (tighter seat on the 45° flank), − = lower"
+],
+[
+"Dentino sul binario linguale, 0 = senza click",
+"Nocke auf der lingualen Schiene, 0 = ohne Click",
+"Tooth on the lingual rail, 0 = no click"
+],
+[
+"Avanzati",
+"Erweitert",
+"Advanced"
+],
+[
+"Fine dei binari sotto il margine",
+"Schienenende unter der Präparationsgrenze",
+"Rail end below the margin"
+],
+[
+"Conicità del moncone",
+"Stumpfkonizität",
+"Die taper"
+],
+[
+"Moncone sotto la base del modello",
+"Stumpf unter dem Modellsockel",
+"Die below the model base"
+],
+[
+"Fermo 45° dal fondo",
+"45°-Anschlag ab Boden",
+"45° stop from the bottom"
+],
+[
+"Spazio attorno alla base",
+"Spalt um den Sockel",
+"Clearance around the base"
+],
+[
+"Restringimento base (fianco 45°)",
+"Sockelverjüngung (45°-Flanke)",
+"Base narrowing (45° flank)"
+],
+[
+"Moncone da stampare in piedi sul piatto, base tagliata piana. Corpo dritto con la forma del margine (conico) fino al fermo a 45°, sotto un perno tondo con spazio attorno: niente sottosquadri, si stampa senza supporti. Tocca solo sul fianco a 45°. Offset XY = gioco attorno al corpo e ai binari; Offset Z = sposta l'appoggio sul fianco a 45° (+ moncone più alto). Binario largo con click sul lato linguale, binario stretto sul vestibolare. La corona viene presa dalla scansione così com'è, mai tagliata.",
+"Stumpf stehend auf der Bauplattform drucken, Basis plan geschnitten. Gerader Körper mit der Form der Präparationsgrenze (konisch) bis zum 45°-Anschlag, darunter ein runder Zapfen mit Spalt: keine Unterschnitte, Druck ohne Stützen. Liegt nur an der 45°-Flanke auf. Offset XY = Spiel um Körper und Schienen; Offset Z = verschiebt die Auflage an der 45°-Flanke (+ Stumpf höher). Breite Schiene mit Click lingual, schmale Schiene vestibulär. Die Krone wird unverändert aus dem Scan übernommen, nie beschnitten.",
+"Die printed standing on the build platform, base cut flat. Straight body with the shape of the margin (tapered) down to the 45° stop, below it a round pin with clearance: no undercuts, prints without supports. Touches only on the 45° flank. XY offset = clearance around body and rails; Z offset = moves the seat on the 45° flank (+ die higher). Wide rail with click on the lingual side, narrow rail on the buccal side. The crown is taken from the scan as is, never cut."
+],
+[
+"Nessun moncone. Aggiungine uno e segna il margine con i clic.",
+"Kein Stumpf. Einen hinzufügen und die Präparationsgrenze per Klick markieren.",
+"No die. Add one and mark the margin with clicks."
+],
+[
+"Sup · moncone {0}",
+"OK · Stumpf {0}",
+"Upper · die {0}"
+],
+[
+"Inf · moncone {0}",
+"UK · Stumpf {0}",
+"Lower · die {0}"
+],
+[
+"Sup · margine {0}",
+"OK · Präparationsgrenze {0}",
+"Upper · margin {0}"
+],
+[
+"Inf · margine {0}",
+"UK · Präparationsgrenze {0}",
+"Lower · margin {0}"
+],
+[
+"{0} punti",
+"{0} Punkte",
+"{0} points"
+],
+[
+"Asse di inserzione",
+"Einschubachse",
+"Insertion axis"
+],
+[
+"+ = corona inclinata verso vestibolare",
+"+ = Krone nach vestibulär geneigt",
+"+ = crown tilted buccally"
+],
+[
+"+ = corona inclinata verso mesiale",
+"+ = Krone nach mesial geneigt",
+"+ = crown tilted mesially"
+],
+[
+"Perpendicolare al piano del margine",
+"Senkrecht zur Ebene der Präparationsgrenze",
+"Perpendicular to the margin plane"
+],
+[
+"Arcata",
+"Kiefer",
+"Arch"
+],
+[
+"Come l'asse di estrusione dell'arcata",
+"Wie die Extrusionsachse des Kiefers",
+"Same as the arch extrusion axis"
+],
+[
+"Guarda il moncone lungo la direzione di inserzione, poi premi",
+"Stumpf entlang der Einschubrichtung ansehen, dann drücken",
+"Look at the die along the insertion direction, then press"
+],
+[
+"Margine superiore: clic sinistro attorno alla preparazione (bastano 4–6 punti, la linea segue il margine sulla mesh), clic destro per chiudere, Backspace toglie l'ultimo punto. Trascina col destro per ruotare.",
+"Präparationsgrenze OK: Linksklick um die Präparation (4–6 Punkte genügen, die Linie folgt der Grenze auf dem Mesh), Rechtsklick zum Schließen, Rücktaste entfernt den letzten Punkt. Mit gedrückter rechter Taste drehen.",
+"Upper margin: left click around the preparation (4–6 points are enough, the line follows the margin on the mesh), right click to close, Backspace removes the last point. Drag with the right button to rotate."
+],
+[
+"Margine inferiore: clic sinistro attorno alla preparazione (bastano 4–6 punti, la linea segue il margine sulla mesh), clic destro per chiudere, Backspace toglie l'ultimo punto. Trascina col destro per ruotare.",
+"Präparationsgrenze UK: Linksklick um die Präparation (4–6 Punkte genügen, die Linie folgt der Grenze auf dem Mesh), Rechtsklick zum Schließen, Rücktaste entfernt den letzten Punkt. Mit gedrückter rechter Taste drehen.",
+"Lower margin: left click around the preparation (4–6 points are enough, the line follows the margin on the mesh), right click to close, Backspace removes the last point. Drag with the right button to rotate."
+],
+[
+"Servono almeno 3 punti attorno al margine.",
+"Mindestens 3 Punkte um die Präparationsgrenze nötig.",
+"At least 3 points around the margin are needed."
+],
+[
+"Il margine deve fare un giro completo attorno alla preparazione, sempre nello stesso verso. Ricomincia.",
+"Die Präparationsgrenze muss einmal ganz um die Präparation laufen, immer in derselben Richtung. Neu beginnen.",
+"The margin must go all the way around the preparation, always in the same direction. Start again."
+],
+[
+"Margine troppo corto: aggiungi qualche punto.",
+"Präparationsgrenze zu kurz: weitere Punkte setzen.",
+"Margin too short: add a few points."
+],
+[
+"Inserimento annullato.",
+"Eingabe abgebrochen.",
+"Input cancelled."
+],
+[
+"I monconi richiedono il motore booleano: serve la connessione internet la prima volta. Riprova.",
+"Stümpfe benötigen die Boolesche Engine: beim ersten Mal ist eine Internetverbindung nötig. Erneut versuchen.",
+"Dies need the boolean engine: an internet connection is required the first time. Try again."
+],
+[
+"Supporti per la stampa",
+"Druckstützen",
+"Print supports"
+],
+[
+"Aggiungi supporti",
+"Stützen hinzufügen",
+"Add supports"
+],
+[
+"Solleva",
+"Anheben",
+"Lift"
+],
+[
+"Baseplate sotto l'attacco",
+"Basisplatte unter dem Attachment",
+"Baseplate under the attachment"
+],
+[
+"Pin Ø 0,6 mm in punta e Ø 1 mm di corpo, a 3 mm l'uno dall'altro sulle superfici dell'attacco parallele al piatto, ad almeno 1 mm dalle pareti verticali di ingaggio; dentro gli ingaggi stretti si aggiungono pin singoli. Il modello si esporta già orientato per la stampa (attacco verso il piatto).",
+"Pins Ø 0,6 mm an der Spitze und Ø 1 mm im Körper, im Abstand von 3 mm auf den zur Plattform parallelen Flächen des Attachments, mindestens 1 mm von den senkrechten Eingriffswänden; in engen Eingriffen werden einzelne Pins gesetzt. Das Modell wird bereits druckfertig ausgerichtet exportiert (Attachment zur Plattform).",
+"Pins Ø 0.6 mm at the tip and Ø 1 mm body, 3 mm apart on the attachment surfaces parallel to the platform, at least 1 mm from the vertical engagement walls; single pins are added inside narrow engagements. The model is exported already oriented for printing (attachment towards the platform)."
+],
+[
+"Impostazioni avanzate",
+"Erweiterte Einstellungen",
+"Advanced settings"
+],
+[
+"Asse di estrusione",
+"Extrusionsachse",
+"Extrusion axis"
+],
+[
+"In automatico l'asse va dal centro dell'arcata al punto 3 mm dietro il centro dell'attacco (max 30°). Puoi correggerlo a mano.",
+"Automatisch verläuft die Achse von der Bogenmitte zum Punkt 3 mm hinter der Attachmentmitte (max. 30°). Du kannst sie von Hand korrigieren.",
+"Automatically the axis runs from the arch centre to the point 3 mm behind the attachment centre (max 30°). You can correct it by hand."
+],
+[
+"Antero-post.",
+"Anterior-post.",
+"Antero-post."
+],
+[
+"Laterale",
+"Lateral",
+"Lateral"
+],
+[
+"Asse superiore antero-posteriore",
+"Achse OK anterior-posterior",
+"Upper axis antero-posterior"
+],
+[
+"Asse superiore laterale",
+"Achse OK lateral",
+"Upper axis lateral"
+],
+[
+"Asse inferiore antero-posteriore",
+"Achse UK anterior-posterior",
+"Lower axis antero-posterior"
+],
+[
+"Asse inferiore laterale",
+"Achse UK lateral",
+"Lower axis lateral"
+],
+[
+"Dalla vista",
+"Aus Ansicht",
+"From view"
+],
+[
+"Verticale",
+"Senkrecht",
+"Vertical"
+],
+[
+"Regolato a mano.",
+"Von Hand eingestellt.",
+"Set by hand."
+],
+[
+"Auto verso l'attacco (3 mm dietro il centro).",
+"Auto zum Attachment (3 mm hinter der Mitte).",
+"Auto towards the attachment (3 mm behind the centre)."
+],
+[
+"Auto verso l'attacco (3 mm dietro il centro): servirebbero {0}°, limitato a {1}°.",
+"Auto zum Attachment (3 mm hinter der Mitte): nötig wären {0}°, begrenzt auf {1}°.",
+"Auto towards the attachment (3 mm behind the centre): {0}° would be needed, limited to {1}°."
+],
+[
+"Auto verso l'attacco, fermato dove il modello arriva al bordo dell'attacco.",
+"Auto zum Attachment, gestoppt wo das Modell den Rand des Attachments erreicht.",
+"Auto towards the attachment, stopped where the model reaches the attachment edge."
+],
+[
+"Circa {0} mm² di gengiva vicino al bordo verranno rifilati.",
+"Etwa {0} mm² Gingiva am Rand werden beschnitten.",
+"About {0} mm² of gingiva near the edge will be trimmed."
+],
+[
+"Guarda il modello dal lato della piastra (vista occlusale) prima di usare “Dalla vista”: l'inclinazione massima è 30°.",
+"Modell von der Plattenseite betrachten (okklusale Ansicht), bevor du „Aus Ansicht“ verwendest: maximale Neigung 30°.",
+"Look at the model from the plate side (occlusal view) before using “From view”: the maximum tilt is 30°."
+],
+[
+"Levigatura del bordo",
+"Randglättung",
+"Edge smoothing"
+],
+[
+"Leviga il bordo della scansione e una fascia di 1–2 mm verso l'interno, dove la gengiva diventa parete. Denti e zone utili non vengono toccati.",
+"Glättet den Scanrand und einen 1–2 mm breiten Streifen nach innen, wo die Gingiva zur Wand wird. Zähne und relevante Bereiche bleiben unberührt.",
+"Smooths the scan edge and a 1–2 mm band inwards, where the gingiva becomes the wall. Teeth and useful areas are not touched."
+],
+[
+"Calcola modelli",
+"Modelle berechnen",
+"Compute models"
+],
+[
+"Esporta",
+"Exportieren",
+"Export"
+],
+[
+"Modelli per la stampa (STL)",
+"Modelle für den Druck (STL)",
+"Models for printing (STL)"
+],
+[
+"Impostazioni cambiate: ricalcola i modelli.",
+"Einstellungen geändert: Modelle neu berechnen.",
+"Settings changed: recompute the models."
+],
+[
+"Calcolo dei modelli",
+"Modellberechnung",
+"Computing models"
+],
+[
+"Preparazione…",
+"Vorbereitung…",
+"Preparing…"
+],
+[
+"Preparazione",
+"Vorbereitung",
+"Preparing"
+],
+[
+"Avvio del calcolo…",
+"Berechnung startet…",
+"Starting computation…"
+],
+[
+"Avvio del calcolo",
+"Berechnung startet",
+"Starting computation"
+],
+[
+"Carico il motore booleano…",
+"Boolesche Engine wird geladen…",
+"Loading the boolean engine…"
+],
+[
+"Carico il motore booleano",
+"Boolesche Engine wird geladen",
+"Loading the boolean engine"
+],
+[
+"Superiore · {0}",
+"Oberkiefer · {0}",
+"Upper · {0}"
+],
+[
+"Inferiore · {0}",
+"Unterkiefer · {0}",
+"Lower · {0}"
+],
+[
+"base del modello",
+"Modellsockel",
+"model base"
+],
+[
+"pulizia della mesh",
+"Mesh-Bereinigung",
+"mesh cleanup"
+],
+[
+"unione attachment",
+"Attachment verbinden",
+"attachment union"
+],
+[
+"svuotamento",
+"Aushöhlen",
+"hollowing"
+],
+[
+"nido d'ape",
+"Wabe",
+"honeycomb"
+],
+[
+"forma dei monconi",
+"Stumpfform",
+"die shape"
+],
+[
+"forma del moncone",
+"Stumpfform",
+"die shape"
+],
+[
+"sedi dei monconi nel modello",
+"Stumpfaufnahmen im Modell",
+"die seats in the model"
+],
+[
+"fosse attorno alle preparazioni",
+"Gräben um die Präparationen",
+"ditches around the preparations"
+],
+[
+"supporti per la stampa",
+"Druckstützen",
+"print supports"
+],
+[
+"La scansione supera lo spazio disponibile con {0}. Scegli una piastra più alta o riposiziona nella fase 3.",
+"Der Scan überschreitet den verfügbaren Raum mit {0}. Höhere Platte wählen oder in Schritt 3 neu positionieren.",
+"The scan exceeds the available space with {0}. Choose a higher plate or reposition in step 3."
+],
+[
+"Modelli {0} {1} pronti. Resina: sup",
+"Modelle {0} {1} fertig. Harz: OK",
+"{1} models {0} ready. Resin: upper"
+],
+[
+"pieni",
+"massiv",
+"solid"
+],
+[
+"cavi",
+"hohl",
+"hollow"
+],
+[
+"a nido d'ape",
+"mit Wabe",
+"honeycomb"
+],
+[
+", inf",
+", UK",
+", lower"
+],
+[
+"(attachment incluso).",
+"(inkl. Attachment).",
+"(attachment included)."
+],
+[
+". Usa “Sezione” per vedere l'interno.",
+". Mit „Schnitt“ das Innere ansehen.",
+". Use “Section” to see the inside."
+],
+[
+"Usa “Sezione” per vedere l'interno.",
+"Mit „Schnitt“ das Innere ansehen.",
+"Use “Section” to see the inside."
+],
+[
+"Sup: rifilati {0} triangoli di bordo",
+"OK: {0} Randdreiecke beschnitten",
+"Upper: {0} edge triangles trimmed"
+],
+[
+"Inf: rifilati {0} triangoli di bordo",
+"UK: {0} Randdreiecke beschnitten",
+"Lower: {0} edge triangles trimmed"
+],
+[
+"Sup: sciolti piccoli riccioli del bordo",
+"OK: kleine Randschlaufen gelöst",
+"Upper: small edge loops untangled"
+],
+[
+"Inf: sciolti piccoli riccioli del bordo",
+"UK: kleine Randschlaufen gelöst",
+"Lower: small edge loops untangled"
+],
+[
+"{0} monconi sfilabili (file STL separati)",
+"{0} herausnehmbare Stümpfe (separate STL-Dateien)",
+"{0} removable dies (separate STL files)"
+],
+[
+"{0} pin di supporto",
+"{0} Stützpins",
+"{0} support pins"
+],
+[
+"{0} pin di supporto e baseplate",
+"{0} Stützpins und Basisplatte",
+"{0} support pins and baseplate"
+],
+[
+"nessuna superficie adatta ai supporti",
+"keine geeignete Fläche für Stützen",
+"no surface suitable for supports"
+],
+[
+"spazio insufficiente per svuotare",
+"zu wenig Platz zum Aushöhlen",
+"not enough space for hollowing"
+],
+[
+"unione attachment non riuscita, esportati come due corpi",
+"Attachment-Verbindung fehlgeschlagen, als zwei Körper exportiert",
+"attachment union failed, exported as two bodies"
+],
+[
+"moncone accorciato: non può uscire dall'attachment",
+"Stumpf gekürzt: darf nicht aus dem Attachment ragen",
+"die shortened: it cannot protrude from the attachment"
+],
+[
+"conicità ridotta a {0}° per non assottigliare troppo la base",
+"Konizität auf {0}° reduziert, um die Basis nicht zu sehr zu schwächen",
+"taper reduced to {0}° so the base does not get too thin"
+],
+[
+"fermo abbassato per restare sotto il collo del margine",
+"Anschlag abgesenkt, um unter dem Hals der Präparationsgrenze zu bleiben",
+"stop lowered to stay below the margin neck"
+],
+[
+"preparazione molto stretta: controlla la carota sotto il margine",
+"sehr schmale Präparation: Zapfen unter der Präparationsgrenze prüfen",
+"very narrow preparation: check the stem below the margin"
+],
+[
+"corona non trovata sulla scansione: controlla il margine",
+"Krone im Scan nicht gefunden: Präparationsgrenze prüfen",
+"crown not found on the scan: check the margin"
+],
+[
+"il margine non si chiude sulla superficie della scansione: corona stimata, controlla il moncone (meglio più punti sul margine)",
+"die Präparationsgrenze schließt nicht auf der Scanoberfläche: Krone geschätzt, Stumpf prüfen (besser mehr Punkte setzen)",
+"the margin does not close on the scan surface: crown estimated, check the die (more margin points are better)"
+],
+[
+"la corona sporge oltre 45° rispetto all'asse di inserzione: prova «Auto» o correggi l'inclinazione",
+"die Krone ragt mehr als 45° über die Einschubachse hinaus: «Auto» versuchen oder die Neigung korrigieren",
+"the crown overhangs more than 45° from the insertion axis: try “Auto” or correct the tilt"
+],
+[
+"scritta «{0}» non aggiunta: la barra posteriore dell'attachment è coperta dal modello",
+"Schrift «{0}» nicht hinzugefügt: der hintere Steg des Attachments ist vom Modell verdeckt",
+"text “{0}” not added: the rear bar of the attachment is covered by the model"
+],
+[
+"scritta «{0}» non aggiunta: su questo attachment non c'è una superficie piena abbastanza grande",
+"Schrift «{0}» nicht hinzugefügt: auf diesem Attachment gibt es keine ausreichend große Fläche",
+"text “{0}” not added: this attachment has no large enough solid surface"
+],
+[
+"il calcolo si è interrotto (memoria?)",
+"die Berechnung wurde abgebrochen (Speicher?)",
+"the computation stopped (memory?)"
+],
+[
+"Il motore booleano non si è caricato (serve la connessione internet la prima volta). Usa il riempimento solido o riprova.",
+"Die Boolesche Engine wurde nicht geladen (beim ersten Mal ist Internet nötig). Massive Füllung verwenden oder erneut versuchen.",
+"The boolean engine did not load (an internet connection is needed the first time). Use solid infill or try again."
+],
+[
+"Il bordo della scansione {0} torna sotto sé stesso in {1} punti (segnati in rosso): lì c'è una piega o un lembo che si ripiega. Ritaglia quella zona in fase 1 e riprova.",
+"Der Rand des Scans {0} läuft an {1} Stellen unter sich selbst (rot markiert): dort ist eine Falte oder ein umgeschlagener Lappen. Diesen Bereich in Schritt 1 beschneiden und erneut versuchen.",
+"The edge of the {0} scan folds back under itself at {1} points (marked in red): there is a fold or a flap there. Trim that area in step 1 and try again."
+],
+[
+"La scansione {0} non ha un bordo aperto.",
+"Der Scan {0} hat keinen offenen Rand.",
+"The {0} scan has no open edge."
+],
+[
+"Non riesco a chiudere la base della scansione {0}: contorno troppo irregolare.",
+"Der Sockel des Scans {0} lässt sich nicht schließen: Kontur zu unregelmäßig.",
+"Cannot close the base of the {0} scan: outline too irregular."
+],
+[
+"Calcolo parallelo non disponibile, uso il thread principale:",
+"Parallele Berechnung nicht verfügbar, Hauptthread wird verwendet:",
+"Parallel computation not available, using the main thread:"
+],
+[
+"Attachment RotoClick non decodificato: {0} (serve un browser aggiornato: Chrome, Edge, Firefox o Safari recenti).",
+"RotoClick-Attachment nicht dekodiert: {0} (aktueller Browser nötig: Chrome, Edge, Firefox oder Safari).",
+"RotoClick attachment not decoded: {0} (an up-to-date browser is needed: recent Chrome, Edge, Firefox or Safari)."
+],
+[
+"three.js non raggiungibile: serve la connessione a internet per aprire il tool.",
+"three.js nicht erreichbar: zum Öffnen des Tools ist eine Internetverbindung nötig.",
+"three.js unreachable: an internet connection is needed to open the tool."
+],
+[
+"Supporti",
+"Stützen",
+"Supports"
+],
+[
+"Accedi / Registrati",
+"Anmelden / Registrieren",
+"Log in / Sign up"
+],
+[
+"Accedi",
+"Anmelden",
+"Log in"
+],
+[
+"Esci",
+"Abmelden",
+"Log out"
+],
+[
+"Accedi a RotoClick Studio",
+"Bei RotoClick Studio anmelden",
+"Log in to RotoClick Studio"
+],
+[
+"Email",
+"E-Mail",
+"Email"
+],
+[
+"Password",
+"Passwort",
+"Password"
+],
+[
+"Nuovo cliente?",
+"Neukunde?",
+"New customer?"
+],
+[
+"Registrati gratis",
+"Kostenlos registrieren",
+"Sign up for free"
+],
+[
+"Password dimenticata?",
+"Passwort vergessen?",
+"Forgot password?"
+],
+[
+"Per esportare accedi o registrati: la registrazione è gratuita.",
+"Zum Exportieren anmelden oder registrieren: die Registrierung ist kostenlos.",
+"To export, log in or sign up: signing up is free."
+],
+[
+"Registra il tuo laboratorio",
+"Labor registrieren",
+"Register your lab"
+],
+[
+"La registrazione è gratuita e permette di usare tutto il tool. Per esportare serve il codice di un kit RotoClick (K-Lab o K-Clinic): ogni codice include dei casi gratuiti.",
+"Die Registrierung ist kostenlos und schaltet das ganze Tool frei. Zum Exportieren braucht es den Code eines RotoClick-Kits (K-Lab oder K-Clinic): jeder Code enthält kostenlose Fälle.",
+"Signing up is free and gives access to the whole tool. To export you need the code of a RotoClick kit (K-Lab or K-Clinic): each code includes free cases."
+],
+[
+"Ragione sociale",
+"Firmenname",
+"Company name"
+],
+[
+"Partita IVA / UID",
+"USt-IdNr. / UID",
+"VAT number / UID"
+],
+[
+"Partita IVA",
+"USt-IdNr.",
+"VAT number"
+],
+[
+"P.IVA / UID",
+"USt-IdNr. / UID",
+"VAT no. / UID"
+],
+[
+"P.IVA",
+"USt-IdNr.",
+"VAT no."
+],
+[
+"Password (min. 8 caratteri)",
+"Passwort (mind. 8 Zeichen)",
+"Password (min. 8 characters)"
+],
+[
+"Accetto le condizioni d'uso, compreso il prezzo di {0} per ogni export oltre i casi inclusi, fatturato dal rivenditore del mio kit.",
+"Ich akzeptiere die Nutzungsbedingungen, einschließlich des Preises von {0} pro Export über die inklusiven Fälle hinaus, abgerechnet vom Händler meines Kits.",
+"I accept the terms of use, including the price of {0} for each export beyond the included cases, invoiced by the dealer of my kit."
+],
+[
+"Accetto le",
+"Ich akzeptiere die",
+"I accept the"
+],
+[
+"condizioni d'uso",
+"Nutzungsbedingungen",
+"terms of use"
+],
+[
+"e l'",
+"und die",
+"and the"
+],
+[
+"informativa privacy",
+"Datenschutzerklärung",
+"privacy notice"
+],
+[
+", compreso il prezzo di {0} per ogni export oltre i casi inclusi, fatturato dal rivenditore del mio kit.",
+", einschließlich des Preises von {0} pro Export über die inklusiven Fälle hinaus, abgerechnet vom Händler meines Kits.",
+", including the price of {0} for each export beyond the included cases, invoiced by the dealer of my kit."
+],
+[
+"Registrati",
+"Registrieren",
+"Sign up"
+],
+[
+"Hai già un account?",
+"Schon ein Konto?",
+"Already have an account?"
+],
+[
+"Inserisci ragione sociale e partita IVA.",
+"Firmenname und USt-IdNr. eingeben.",
+"Enter company name and VAT number."
+],
+[
+"La password deve avere almeno 8 caratteri.",
+"Das Passwort muss mindestens 8 Zeichen haben.",
+"The password must have at least 8 characters."
+],
+[
+"La password deve avere almeno 6 caratteri.",
+"Das Passwort muss mindestens 6 Zeichen haben.",
+"The password must have at least 6 characters."
+],
+[
+"Per registrarti devi accettare le condizioni.",
+"Zur Registrierung musst du die Bedingungen akzeptieren.",
+"To sign up you must accept the terms."
+],
+[
+"Controlla la tua email",
+"Prüfe deine E-Mails",
+"Check your email"
+],
+[
+"Ti abbiamo inviato un link a",
+"Wir haben einen Link gesendet an",
+"We sent a link to"
+],
+[
+". Aprilo per confermare l'indirizzo, poi accedi.",
+". Öffne ihn, um die Adresse zu bestätigen, und melde dich dann an.",
+". Open it to confirm the address, then log in."
+],
+[
+"OK",
+"OK",
+"OK"
+],
+[
+"Recupera la password",
+"Passwort wiederherstellen",
+"Recover password"
+],
+[
+"Ti inviamo un link per sceglierne una nuova.",
+"Wir senden dir einen Link, um ein neues zu wählen.",
+"We will send you a link to choose a new one."
+],
+[
+"Invia link",
+"Link senden",
+"Send link"
+],
+[
+"Se l'email è registrata riceverai il link a breve.",
+"Wenn die E-Mail registriert ist, erhältst du den Link in Kürze.",
+"If the email is registered you will receive the link shortly."
+],
+[
+"Scegli una nuova password",
+"Neues Passwort wählen",
+"Choose a new password"
+],
+[
+"Nuova password (min. 8 caratteri)",
+"Neues Passwort (mind. 8 Zeichen)",
+"New password (min. 8 characters)"
+],
+[
+"Nuova password",
+"Neues Passwort",
+"New password"
+],
+[
+"Almeno 8 caratteri.",
+"Mindestens 8 Zeichen.",
+"At least 8 characters."
+],
+[
+"Salva",
+"Speichern",
+"Save"
+],
+[
+"Password aggiornata",
+"Passwort aktualisiert",
+"Password updated"
+],
+[
+"Ora sei connesso.",
+"Du bist jetzt angemeldet.",
+"You are now logged in."
+],
+[
+"Inserisci il codice del kit",
+"Kit-Code eingeben",
+"Enter the kit code"
+],
+[
+"Trovi il codice nella confezione del kit RotoClick K-Lab o K-Clinic.",
+"Den Code findest du in der Verpackung des RotoClick-Kits K-Lab oder K-Clinic.",
+"You will find the code in the packaging of the RotoClick K-Lab or K-Clinic kit."
+],
+[
+"Codice kit",
+"Kit-Code",
+"Kit code"
+],
+[
+"Attiva codice",
+"Code aktivieren",
+"Activate code"
+],
+[
+"Il codice garantisce che il kit è originale e acquistato da un rivenditore autorizzato.",
+"Der Code garantiert, dass das Kit original ist und bei einem autorisierten Händler gekauft wurde.",
+"The code guarantees that the kit is original and bought from an authorised dealer."
+],
+[
+"Elenco rivenditori",
+"Händlerliste",
+"Dealer list"
+],
+[
+"Registrazione completata. Inserisci il codice del tuo kit per sbloccare l'export.",
+"Registrierung abgeschlossen. Gib den Code deines Kits ein, um den Export freizuschalten.",
+"Sign-up complete. Enter your kit code to unlock export."
+],
+[
+"Per esportare inserisci il codice del tuo kit RotoClick (K-Lab o K-Clinic). Ogni codice include casi gratuiti.",
+"Zum Exportieren den Code deines RotoClick-Kits eingeben (K-Lab oder K-Clinic). Jeder Code enthält kostenlose Fälle.",
+"To export, enter the code of your RotoClick kit (K-Lab or K-Clinic). Each code includes free cases."
+],
+[
+"Codice attivato",
+"Code aktiviert",
+"Code activated"
+],
+[
+"+{0} casi inclusi ({1}). Ora hai {2} casi inclusi disponibili.",
+"+{0} inklusive Fälle ({1}). Jetzt hast du {2} inklusive Fälle.",
+"+{0} included cases ({1}). You now have {2} included cases available."
+],
+[
+"Il tuo rivenditore è",
+"Dein Händler ist",
+"Your dealer is"
+],
+[
+": dopo i casi inclusi ogni export costa {0} e ti viene fatturato da lui a fine mese.",
+": nach den inklusiven Fällen kostet jeder Export {0} und wird dir von ihm am Monatsende in Rechnung gestellt.",
+": after the included cases each export costs {0} and is invoiced to you by them at the end of the month."
+],
+[
+"Continua",
+"Weiter",
+"Continue"
+],
+[
+"Codice non valido. RotoClick Studio funziona solo con kit originali acquistati presso un rivenditore autorizzato.",
+"Ungültiger Code. RotoClick Studio funktioniert nur mit Original-Kits von einem autorisierten Händler.",
+"Invalid code. RotoClick Studio only works with original kits bought from an authorised dealer."
+],
+[
+"Questo codice è già stato utilizzato.",
+"Dieser Code wurde bereits verwendet.",
+"This code has already been used."
+],
+[
+"Troppi tentativi non riusciti. Riprova tra un'ora.",
+"Zu viele Fehlversuche. In einer Stunde erneut versuchen.",
+"Too many failed attempts. Try again in an hour."
+],
+[
+"Solo un account laboratorio può inserire un codice kit.",
+"Nur ein Laborkonto kann einen Kit-Code eingeben.",
+"Only a lab account can enter a kit code."
+],
+[
+"Solo un account laboratorio può esportare.",
+"Nur ein Laborkonto kann exportieren.",
+"Only a lab account can export."
+],
+[
+"Inserisci il codice del tuo kit RotoClick per sbloccare l'export.",
+"Gib den Code deines RotoClick-Kits ein, um den Export freizuschalten.",
+"Enter your RotoClick kit code to unlock export."
+],
+[
+"Export non disponibile. Contatta {0}.",
+"Export nicht verfügbar. Bitte {0} kontaktieren.",
+"Export not available. Contact {0}."
+],
+[
+"Export non disponibile",
+"Export nicht verfügbar",
+"Export not available"
+],
+[
+"L'export è bloccato per il tuo account. Contatta {0}.",
+"Der Export ist für dein Konto gesperrt. Bitte {0} kontaktieren.",
+"Export is blocked for your account. Contact {0}."
+],
+[
+"L'export è bloccato. Contatta",
+"Der Export ist gesperrt. Bitte kontaktieren:",
+"Export is blocked. Contact"
+],
+[
+"Tipo di export sconosciuto",
+"Unbekannter Exporttyp",
+"Unknown export type"
+],
+[
+"Niente da esportare",
+"Nichts zu exportieren",
+"Nothing to export"
+],
+[
+"Calcola prima i modelli.",
+"Zuerst die Modelle berechnen.",
+"Compute the models first."
+],
+[
+"Carica prima le scansioni superiore e inferiore.",
+"Zuerst OK- und UK-Scan laden.",
+"Load the upper and lower scans first."
+],
+[
+"Export dimostrativo",
+"Demo-Export",
+"Demo export"
+],
+[
+"Sei connesso come amministratore Dentag: questo export non viene conteggiato né fatturato.",
+"Du bist als Dentag-Administrator angemeldet: dieser Export wird weder gezählt noch berechnet.",
+"You are logged in as Dentag administrator: this export is neither counted nor invoiced."
+],
+[
+"Account del back-end",
+"Back-End-Konto",
+"Back-end account"
+],
+[
+"Questo account serve per la gestione. Per esportare accedi con un account laboratorio.",
+"Dieses Konto dient der Verwaltung. Zum Exportieren mit einem Laborkonto anmelden.",
+"This account is for management. To export, log in with a lab account."
+],
+[
+"Esporta modelli per la stampa",
+"Modelle für den Druck exportieren",
+"Export models for printing"
+],
+[
+"Esporta scansioni orientate Key Clinic",
+"Ausgerichtete Key-Clinic-Scans exportieren",
+"Export oriented Key Clinic scans"
+],
+[
+"Questo export è gratuito.",
+"Dieser Export ist kostenlos.",
+"This export is free."
+],
+[
+"Caso incluso",
+"Inklusiver Fall",
+"Included case"
+],
+[
+"ne restano {0} dopo questo export",
+"danach bleiben {0}",
+"{0} left after this export"
+],
+[
+"Ti verrà addebitato da",
+"Abgerechnet von",
+"Invoiced by"
+],
+[
+"a fine mese.",
+"am Monatsende.",
+"at the end of the month."
+],
+[
+"Ogni export conta come un caso, anche se riesporti lo stesso lavoro: controlla i modelli prima di confermare.",
+"Jeder Export zählt als ein Fall, auch wenn du dieselbe Arbeit erneut exportierst: Modelle vor dem Bestätigen prüfen.",
+"Each export counts as one case, even if you re-export the same job: check the models before confirming."
+],
+[
+"Conferma ed esporta",
+"Bestätigen und exportieren",
+"Confirm and export"
+],
+[
+"+ IVA",
+"+ MwSt.",
+"+ VAT"
+],
+[
+"{0} casi inclusi",
+"{0} inklusive Fälle",
+"{0} included cases"
+],
+[
+"{0} a caso",
+"{0} pro Fall",
+"{0} per case"
+],
+[
+"Inserisci codice kit",
+"Kit-Code eingeben",
+"Enter kit code"
+],
+[
+"Export bloccato",
+"Export gesperrt",
+"Export blocked"
+],
+[
+"Rivenditore",
+"Händler",
+"Dealer"
+],
+[
+"— inserisci il codice di un kit",
+"— Kit-Code eingeben",
+"— enter a kit code"
+],
+[
+"Casi inclusi",
+"Inklusive Fälle",
+"Included cases"
+],
+[
+"Export a pagamento",
+"Kostenpflichtige Exporte",
+"Paid exports"
+],
+[
+"{0} questo mese · {1} l'uno",
+"{0} diesen Monat · je {1}",
+"{0} this month · {1} each"
+],
+[
+"Kit registrati",
+"Registrierte Kits",
+"Registered kits"
+],
+[
+"nessuno",
+"keine",
+"none"
+],
+[
+"I miei export",
+"Meine Exporte",
+"My exports"
+],
+[
+"← Account",
+"← Konto",
+"← Account"
+],
+[
+"Nessun export finora.",
+"Noch keine Exporte.",
+"No exports yet."
+],
+[
+"Data",
+"Datum",
+"Date"
+],
+[
+"Tipo",
+"Typ",
+"Type"
+],
+[
+"Fatturato da",
+"Abgerechnet von",
+"Invoiced by"
+],
+[
+"Importo",
+"Betrag",
+"Amount"
+],
+[
+"Modelli",
+"Modelle",
+"Models"
+],
+[
+"Key Clinic",
+"Key Clinic",
+"Key Clinic"
+],
+[
+"stornato",
+"storniert",
+"reversed"
+],
+[
+"incluso",
+"inklusive",
+"included"
+],
+[
+"Email o password errati.",
+"E-Mail oder Passwort falsch.",
+"Wrong email or password."
+],
+[
+"Email non ancora confermata: apri il link che ti abbiamo inviato.",
+"E-Mail noch nicht bestätigt: öffne den Link, den wir dir gesendet haben.",
+"Email not confirmed yet: open the link we sent you."
+],
+[
+"Questa email è già registrata. Accedi o recupera la password.",
+"Diese E-Mail ist bereits registriert. Anmelden oder Passwort wiederherstellen.",
+"This email is already registered. Log in or recover your password."
+],
+[
+"Email non valida.",
+"Ungültige E-Mail.",
+"Invalid email."
+],
+[
+"Email non valida",
+"Ungültige E-Mail",
+"Invalid email"
+],
+[
+"Troppe richieste. Riprova tra qualche minuto.",
+"Zu viele Anfragen. In ein paar Minuten erneut versuchen.",
+"Too many requests. Try again in a few minutes."
+],
+[
+"Non autenticato",
+"Nicht angemeldet",
+"Not logged in"
+],
+[
+"Accesso non consentito",
+"Zugriff nicht erlaubt",
+"Access not allowed"
+],
+[
+"Operazione non riuscita",
+"Vorgang fehlgeschlagen",
+"Operation failed"
+],
+[
+"In anteprima il recupero password non invia email. Password degli account demo: {0}",
+"In der Vorschau sendet die Passwort-Wiederherstellung keine E-Mails. Passwort der Demokonten: {0}",
+"In preview, password recovery sends no email. Demo account password: {0}"
+],
+[
+"Modalità anteprima — dati solo in questo browser",
+"Vorschaumodus — Daten nur in diesem Browser",
+"Preview mode — data only in this browser"
+],
+[
+"Supabase non è ancora configurato (config.js): account, codici ed export sono simulati.",
+"Supabase ist noch nicht konfiguriert (config.js): Konten, Codes und Exporte sind simuliert.",
+"Supabase is not configured yet (config.js): accounts, codes and exports are simulated."
+],
+[
+"Account demo (password",
+"Demokonten (Passwort",
+"Demo accounts (password"
+],
+[
+"Un laboratorio si registra da sé. Codici kit di prova ancora liberi:",
+"Ein Labor registriert sich selbst. Noch freie Test-Kit-Codes:",
+"A lab signs up by itself. Test kit codes still free:"
+],
+[
+"nessuno (generali dal back-end)",
+"keine (im Back-End erzeugen)",
+"none (generate them in the back-end)"
+],
+[
+"Azzera l'anteprima",
+"Vorschau zurücksetzen",
+"Reset preview"
+],
+[
+"Cancellare tutti i dati di prova di questo browser?",
+"Alle Testdaten in diesem Browser löschen?",
+"Delete all test data in this browser?"
+],
+[
+"Caricamento…",
+"Wird geladen…",
+"Loading…"
+],
+[
+"Chiudi",
+"Schließen",
+"Close"
+],
+[
+"Gestione",
+"Verwaltung",
+"Management"
+],
+[
+"Sezioni",
+"Bereiche",
+"Sections"
+],
+[
+"Accesso gestione",
+"Verwaltungs-Login",
+"Management login"
+],
+[
+"Per Dentag e i rivenditori abilitati.",
+"Für Dentag und freigeschaltete Händler.",
+"For Dentag and enabled dealers."
+],
+[
+"Primo accesso",
+"Erstanmeldung",
+"First login"
+],
+[
+"(hai ricevuto l'abilitazione da Dentag) ·",
+"(du wurdest von Dentag freigeschaltet) ·",
+"(you were enabled by Dentag) ·"
+],
+[
+"Usa l'email che Dentag ha abilitato e scegli una password.",
+"Verwende die von Dentag freigeschaltete E-Mail und wähle ein Passwort.",
+"Use the email Dentag enabled and choose a password."
+],
+[
+"Crea accesso",
+"Zugang erstellen",
+"Create access"
+],
+[
+"Ti abbiamo inviato un'email: apri il link per confermare, poi accedi.",
+"Wir haben dir eine E-Mail gesendet: Link öffnen zum Bestätigen, dann anmelden.",
+"We sent you an email: open the link to confirm, then log in."
+],
+[
+"Area non disponibile",
+"Bereich nicht verfügbar",
+"Area not available"
+],
+[
+"Questo è un account laboratorio: usa il tool.",
+"Dies ist ein Laborkonto: bitte das Tool verwenden.",
+"This is a lab account: use the tool."
+],
+[
+"Questo accesso è stato disabilitato. Contatta Dentag.",
+"Dieser Zugang wurde deaktiviert. Bitte Dentag kontaktieren.",
+"This access has been disabled. Contact Dentag."
+],
+[
+"Apri RotoClick Studio",
+"RotoClick Studio öffnen",
+"Open RotoClick Studio"
+],
+[
+"Tool",
+"Tool",
+"Tool"
+],
+[
+"Dentag · admin",
+"Dentag · Admin",
+"Dentag · admin"
+],
+[
+"Riepilogo mese",
+"Monatsübersicht",
+"Monthly summary"
+],
+[
+"Rivenditori",
+"Händler",
+"Dealers"
+],
+[
+"Laboratori",
+"Labore",
+"Labs"
+],
+[
+"Codici kit",
+"Kit-Codes",
+"Kit codes"
+],
+[
+"Export",
+"Exporte",
+"Exports"
+],
+[
+"Accessi",
+"Zugänge",
+"Access"
+],
+[
+"Impostazioni",
+"Einstellungen",
+"Settings"
+],
+[
+"Clienti",
+"Kunden",
+"Customers"
+],
+[
+"Mese",
+"Monat",
+"Month"
+],
+[
+"Riepilogo {0}",
+"Übersicht {0}",
+"Summary {0}"
+],
+[
+"Riepilogo {0} · {1}",
+"Übersicht {0} · {1}",
+"Summary {0} · {1}"
+],
+[
+"Clienti diretti: Dentag fattura a ogni laboratorio il totale indicato.",
+"Direktkunden: Dentag stellt jedem Labor den angegebenen Betrag in Rechnung.",
+"Direct customers: Dentag invoices each lab the total shown."
+],
+[
+"Base per le fatture: a ogni laboratorio il totale indicato; Dentag ti fattura la colonna “Dovuto a Dentag”.",
+"Grundlage für die Rechnungen: jedem Labor den angegebenen Betrag; Dentag stellt dir die Spalte „An Dentag“ in Rechnung.",
+"Basis for invoices: each lab the total shown; Dentag invoices you the “Due to Dentag” column."
+],
+[
+"mese chiuso",
+"Monat abgeschlossen",
+"month closed"
+],
+[
+"Scarica riepilogo (CSV)",
+"Übersicht herunterladen (CSV)",
+"Download summary (CSV)"
+],
+[
+"Scarica dettaglio export (CSV)",
+"Export-Details herunterladen (CSV)",
+"Download export details (CSV)"
+],
+[
+"Scarica (CSV)",
+"Herunterladen (CSV)",
+"Download (CSV)"
+],
+[
+"Casi inclusi usati",
+"Genutzte inklusive Fälle",
+"Included cases used"
+],
+[
+"Totale da fatturare ai clienti",
+"Gesamtbetrag an Kunden",
+"Total to invoice customers"
+],
+[
+"Tua quota",
+"Dein Anteil",
+"Your share"
+],
+[
+"Dovuto a Dentag",
+"An Dentag",
+"Due to Dentag"
+],
+[
+"Laboratorio",
+"Labor",
+"Lab"
+],
+[
+"Inclusi",
+"Inklusive",
+"Included"
+],
+[
+"A pagamento",
+"Kostenpflichtig",
+"Paid"
+],
+[
+"Totale cliente",
+"Betrag Kunde",
+"Customer total"
+],
+[
+"Totale",
+"Gesamt",
+"Total"
+],
+[
+"Nessun export in questo mese.",
+"Keine Exporte in diesem Monat.",
+"No exports this month."
+],
+[
+"← Tutti i rivenditori",
+"← Alle Händler",
+"← All dealers"
+],
+[
+"Quanto fatturare a ogni rivenditore (la quota Dentag di ogni export a pagamento) e ai clienti diretti. Clicca una riga per il dettaglio per laboratorio.",
+"Was jedem Händler (Dentag-Anteil jedes kostenpflichtigen Exports) und den Direktkunden in Rechnung zu stellen ist. Zeile anklicken für die Details pro Labor.",
+"What to invoice each dealer (Dentag's share of each paid export) and direct customers. Click a row for the per-lab detail."
+],
+[
+"Chiudi il mese",
+"Monat abschließen",
+"Close the month"
+],
+[
+"Da fatturare ai rivenditori",
+"An Händler zu fakturieren",
+"To invoice dealers"
+],
+[
+"Da fatturare ai clienti diretti",
+"An Direktkunden zu fakturieren",
+"To invoice direct customers"
+],
+[
+"Incasso Dentag",
+"Einnahmen Dentag",
+"Dentag revenue"
+],
+[
+"Totale clienti",
+"Betrag Kunden",
+"Customers total"
+],
+[
+"Quota rivenditore",
+"Händleranteil",
+"Dealer share"
+],
+[
+"Da fatturare al rivenditore",
+"An Händler zu fakturieren",
+"To invoice the dealer"
+],
+[
+"clienti diretti",
+"Direktkunden",
+"direct customers"
+],
+[
+"fattura ai clienti",
+"Rechnung an Kunden",
+"invoice customers"
+],
+[
+"Chiudere {0}? Dopo la chiusura non si possono più stornare export di quel mese.",
+"{0} abschließen? Danach können Exporte dieses Monats nicht mehr storniert werden.",
+"Close {0}? After closing, exports of that month can no longer be reversed."
+],
+[
+"I rivenditori abilitati ricevono codici kit e fatturano 2 € a caso ai propri clienti. Disattivando un rivenditore i suoi codici non usati vengono revocati e i suoi laboratori passano a Dentag.",
+"Freigeschaltete Händler erhalten Kit-Codes und stellen ihren Kunden 2 € pro Fall in Rechnung. Wird ein Händler deaktiviert, werden seine ungenutzten Codes widerrufen und seine Labore gehen an Dentag.",
+"Enabled dealers receive kit codes and invoice their customers €2 per case. Deactivating a dealer revokes their unused codes and moves their labs to Dentag."
+],
+[
+"Cerca…",
+"Suchen…",
+"Search…"
+],
+[
+"Nuovo rivenditore",
+"Neuer Händler",
+"New dealer"
+],
+[
+"Nome",
+"Name",
+"Name"
+],
+[
+"Paese",
+"Land",
+"Country"
+],
+[
+"Codici liberi",
+"Freie Codes",
+"Free codes"
+],
+[
+"Codici usati",
+"Genutzte Codes",
+"Used codes"
+],
+[
+"Stato",
+"Status",
+"Status"
+],
+[
+"attivo",
+"aktiv",
+"active"
+],
+[
+"disattivato",
+"deaktiviert",
+"deactivated"
+],
+[
+"Modifica",
+"Bearbeiten",
+"Edit"
+],
+[
+"Disattiva",
+"Deaktivieren",
+"Deactivate"
+],
+[
+"Riattiva",
+"Reaktivieren",
+"Reactivate"
+],
+[
+"Dentag",
+"Dentag",
+"Dentag"
+],
+[
+"Modifica rivenditore",
+"Händler bearbeiten",
+"Edit dealer"
+],
+[
+"Email amministrativa",
+"E-Mail Buchhaltung",
+"Accounts email"
+],
+[
+"Note",
+"Notizen",
+"Notes"
+],
+[
+"Poi, in “Accessi”, abilita l'email della persona che userà il back-end.",
+"Dann unter „Zugänge“ die E-Mail der Person freischalten, die das Back-End nutzt.",
+"Then, under “Access”, enable the email of the person who will use the back-end."
+],
+[
+"Disattivare {0}?",
+"{0} deaktivieren?",
+"Deactivate {0}?"
+],
+[
+"{0} codici non usati verranno revocati",
+"{0} ungenutzte Codes werden widerrufen",
+"{0} unused codes will be revoked"
+],
+[
+"{0} laboratori passeranno a Dentag",
+"{0} Labore gehen an Dentag",
+"{0} labs will move to Dentag"
+],
+[
+"gli export già fatti restano a suo carico",
+"bereits erfolgte Exporte bleiben bei ihm",
+"exports already made remain charged to them"
+],
+[
+"{0} codici revocati, {1} laboratori spostati a Dentag.",
+"{0} Codes widerrufen, {1} Labore an Dentag verschoben.",
+"{0} codes revoked, {1} labs moved to Dentag."
+],
+[
+"Tutti i laboratori registrati. Quelli senza rivenditore non hanno ancora inserito un codice kit.",
+"Alle registrierten Labore. Labore ohne Händler haben noch keinen Kit-Code eingegeben.",
+"All registered labs. Those without a dealer have not entered a kit code yet."
+],
+[
+"I laboratori collegati a te tramite il codice del kit.",
+"Die über den Kit-Code mit dir verbundenen Labore.",
+"The labs linked to you through the kit code."
+],
+[
+"{0} nuovi negli ultimi 14 giorni",
+"{0} neu in den letzten 14 Tagen",
+"{0} new in the last 14 days"
+],
+[
+"Cerca laboratorio, P.IVA, email…",
+"Labor, USt-IdNr., E-Mail suchen…",
+"Search lab, VAT no., email…"
+],
+[
+"Collegato il",
+"Verbunden am",
+"Linked on"
+],
+[
+"Kit",
+"Kits",
+"Kits"
+],
+[
+"Inclusi rimasti",
+"Verbleibende inklusive",
+"Included left"
+],
+[
+"A pagamento (mese)",
+"Kostenpflichtig (Monat)",
+"Paid (month)"
+],
+[
+"nuovo",
+"neu",
+"new"
+],
+[
+"senza codice",
+"ohne Code",
+"no code"
+],
+[
+"export bloccato",
+"Export gesperrt",
+"export blocked"
+],
+[
+"demo",
+"Demo",
+"demo"
+],
+[
+"Blocca",
+"Sperren",
+"Block"
+],
+[
+"Sblocca",
+"Entsperren",
+"Unblock"
+],
+[
+"Nessun laboratorio ancora.",
+"Noch keine Labore.",
+"No labs yet."
+],
+[
+"Bloccare l'export per {0}? Potrà ancora usare il tool ma non esportare.",
+"Export für {0} sperren? Das Tool bleibt nutzbar, aber ohne Export.",
+"Block export for {0}? They can still use the tool but not export."
+],
+[
+"Sposta {0}",
+"{0} verschieben",
+"Move {0}"
+],
+[
+"Gli export già fatti restano al rivenditore attuale; da ora in poi fattura il nuovo.",
+"Bereits erfolgte Exporte bleiben beim aktuellen Händler; ab jetzt rechnet der neue ab.",
+"Exports already made stay with the current dealer; from now on the new one invoices."
+],
+[
+"Registrato il",
+"Registriert am",
+"Registered on"
+],
+[
+"Casi inclusi rimasti",
+"Verbleibende inklusive Fälle",
+"Included cases left"
+],
+[
+"A pagamento mese",
+"Kostenpflichtig Monat",
+"Paid month"
+],
+[
+"A pagamento totale",
+"Kostenpflichtig gesamt",
+"Paid total"
+],
+[
+"Bloccato",
+"Gesperrt",
+"Blocked"
+],
+[
+"Ogni kit K-Lab o K-Clinic ha un codice. Un codice funziona solo se è assegnato a un rivenditore attivo; il primo codice inserito da un laboratorio lo collega a quel rivenditore.",
+"Jedes K-Lab- oder K-Clinic-Kit hat einen Code. Ein Code funktioniert nur, wenn er einem aktiven Händler zugeordnet ist; der erste von einem Labor eingegebene Code verbindet es mit diesem Händler.",
+"Every K-Lab or K-Clinic kit has a code. A code only works if it is assigned to an active dealer; the first code a lab enters links it to that dealer."
+],
+[
+"I codici dei kit che ti sono stati assegnati. Quando un cliente inserisce il codice viene collegato a te.",
+"Die dir zugeordneten Kit-Codes. Gibt ein Kunde den Code ein, wird er mit dir verbunden.",
+"The kit codes assigned to you. When a customer enters the code they are linked to you."
+],
+[
+"Disponibili",
+"Verfügbar",
+"Available"
+],
+[
+"Usati",
+"Genutzt",
+"Used"
+],
+[
+"Revocati",
+"Widerrufen",
+"Revoked"
+],
+[
+"Genera codici",
+"Codes erzeugen",
+"Generate codes"
+],
+[
+"Importa codici esistenti",
+"Vorhandene Codes importieren",
+"Import existing codes"
+],
+[
+"Assegna selezionati",
+"Ausgewählte zuordnen",
+"Assign selected"
+],
+[
+"Revoca selezionati",
+"Ausgewählte widerrufen",
+"Revoke selected"
+],
+[
+"Assegna {0} selezionati",
+"{0} ausgewählte zuordnen",
+"Assign {0} selected"
+],
+[
+"Cerca codice, lotto, laboratorio…",
+"Code, Charge, Labor suchen…",
+"Search code, batch, lab…"
+],
+[
+"Tutti gli stati",
+"Alle Status",
+"All statuses"
+],
+[
+"disponibile",
+"verfügbar",
+"available"
+],
+[
+"usato",
+"genutzt",
+"used"
+],
+[
+"revocato",
+"widerrufen",
+"revoked"
+],
+[
+"Codice",
+"Code",
+"Code"
+],
+[
+"Lotto",
+"Charge",
+"Batch"
+],
+[
+"Usato il",
+"Genutzt am",
+"Used on"
+],
+[
+"Creato il",
+"Erstellt am",
+"Created on"
+],
+[
+"non assegnato",
+"nicht zugeordnet",
+"not assigned"
+],
+[
+"non assegnati",
+"nicht zugeordnet",
+"not assigned"
+],
+[
+"Seleziona tutti",
+"Alle auswählen",
+"Select all"
+],
+[
+"Seleziona",
+"Auswählen",
+"Select"
+],
+[
+"Nessun codice.",
+"Keine Codes.",
+"No codes."
+],
+[
+"Assegna {0} codici",
+"{0} Codes zuordnen",
+"Assign {0} codes"
+],
+[
+"— nessuno (codici non utilizzabili)",
+"— keiner (Codes nicht nutzbar)",
+"— none (codes unusable)"
+],
+[
+"Assegna",
+"Zuordnen",
+"Assign"
+],
+[
+"Revocare {0} codici? Non potranno più essere usati.",
+"{0} Codes widerrufen? Sie können nicht mehr verwendet werden.",
+"Revoke {0} codes? They can no longer be used."
+],
+[
+"Codici casuali nel formato RK-XXXX-XXXX, da stampare sulle etichette dei kit.",
+"Zufällige Codes im Format RK-XXXX-XXXX, für die Etiketten der Kits.",
+"Random codes in the format RK-XXXX-XXXX, to print on the kit labels."
+],
+[
+"Incolla i codici già stampati sui kit, uno per riga. Spazi e trattini non contano.",
+"Bereits auf den Kits gedruckte Codes einfügen, einer pro Zeile. Leerzeichen und Bindestriche zählen nicht.",
+"Paste the codes already printed on the kits, one per line. Spaces and dashes don't matter."
+],
+[
+"Quanti codici",
+"Anzahl Codes",
+"How many codes"
+],
+[
+"Codici",
+"Codes",
+"Codes"
+],
+[
+"Un codice per riga",
+"Ein Code pro Zeile",
+"One code per line"
+],
+[
+"Tipo di kit",
+"Kit-Typ",
+"Kit type"
+],
+[
+"— assegna più tardi",
+"— später zuordnen",
+"— assign later"
+],
+[
+"Lotto / riferimento (facoltativo)",
+"Charge / Referenz (optional)",
+"Batch / reference (optional)"
+],
+[
+"es. DDT 2026-112",
+"z. B. LS 2026-112",
+"e.g. DN 2026-112"
+],
+[
+"Genera",
+"Erzeugen",
+"Generate"
+],
+[
+"Importa",
+"Importieren",
+"Import"
+],
+[
+"{0} codici generati",
+"{0} Codes erzeugt",
+"{0} codes generated"
+],
+[
+"Scarica per le etichette (CSV)",
+"Für Etiketten herunterladen (CSV)",
+"Download for labels (CSV)"
+],
+[
+"Fatto",
+"Fertig",
+"Done"
+],
+[
+"Incolla almeno un codice.",
+"Mindestens einen Code einfügen.",
+"Paste at least one code."
+],
+[
+"Importati {0}.",
+"{0} importiert.",
+"{0} imported."
+],
+[
+"Già presenti: {0}.",
+"Bereits vorhanden: {0}.",
+"Already present: {0}."
+],
+[
+"Troppo corti (min. 6 caratteri): {0}.",
+"Zu kurz (mind. 6 Zeichen): {0}.",
+"Too short (min. 6 characters): {0}."
+],
+[
+"Da 1 a 1000 codici per volta",
+"1 bis 1000 Codes auf einmal",
+"1 to 1000 codes at a time"
+],
+[
+"Tipo non valido",
+"Ungültiger Typ",
+"Invalid type"
+],
+[
+"Rivenditore non valido o disattivato",
+"Händler ungültig oder deaktiviert",
+"Dealer invalid or deactivated"
+],
+[
+"Ogni export confermato da un laboratorio, con data e ora. È la prova in caso di contestazione; un errore evidente si storna finché il mese non è chiuso.",
+"Jeder von einem Labor bestätigte Export mit Datum und Uhrzeit. Das ist der Nachweis bei Reklamationen; ein offensichtlicher Fehler kann storniert werden, solange der Monat nicht abgeschlossen ist.",
+"Every export confirmed by a lab, with date and time. It is the proof in case of a dispute; an obvious error can be reversed until the month is closed."
+],
+[
+"Ogni export confermato da un laboratorio, con data e ora. È la prova in caso di contestazione.",
+"Jeder von einem Labor bestätigte Export mit Datum und Uhrzeit. Das ist der Nachweis bei Reklamationen.",
+"Every export confirmed by a lab, with date and time. It is the proof in case of a dispute."
+],
+[
+"Tutti i rivenditori",
+"Alle Händler",
+"All dealers"
+],
+[
+"Cerca laboratorio…",
+"Labor suchen…",
+"Search lab…"
+],
+[
+"Data e ora",
+"Datum und Uhrzeit",
+"Date and time"
+],
+[
+"Storna",
+"Stornieren",
+"Reverse"
+],
+[
+"Storna export",
+"Export stornieren",
+"Reverse export"
+],
+[
+"caso incluso (torna disponibile)",
+"inklusiver Fall (wird wieder verfügbar)",
+"included case (becomes available again)"
+],
+[
+"Motivo",
+"Grund",
+"Reason"
+],
+[
+"es. export doppio per errore",
+"z. B. versehentlich doppelt exportiert",
+"e.g. exported twice by mistake"
+],
+[
+"Il mese è già chiuso: correggi con una nota di credito.",
+"Der Monat ist bereits abgeschlossen: mit einer Gutschrift korrigieren.",
+"The month is already closed: correct it with a credit note."
+],
+[
+"Export già stornato",
+"Export bereits storniert",
+"Export already reversed"
+],
+[
+"Export non trovato",
+"Export nicht gefunden",
+"Export not found"
+],
+[
+"Accessi al back-end",
+"Zugänge zum Back-End",
+"Back-end access"
+],
+[
+"Abilita l'email di una persona: poi entra in questa pagina con “Primo accesso” usando quella email. I laboratori invece si registrano da soli nel tool.",
+"Die E-Mail einer Person freischalten: danach meldet sie sich hier mit „Erstanmeldung“ und dieser E-Mail an. Labore registrieren sich dagegen selbst im Tool.",
+"Enable a person's email: they then enter this page with “First login” using that email. Labs sign up by themselves in the tool."
+],
+[
+"Abilita un'email",
+"E-Mail freischalten",
+"Enable an email"
+],
+[
+"Ruolo",
+"Rolle",
+"Role"
+],
+[
+"Admin Dentag",
+"Admin Dentag",
+"Dentag admin"
+],
+[
+"— scegli",
+"— wählen",
+"— choose"
+],
+[
+"Abilita",
+"Freischalten",
+"Enable"
+],
+[
+"In attesa di primo accesso",
+"Wartet auf Erstanmeldung",
+"Waiting for first login"
+],
+[
+"Nessuno.",
+"Niemand.",
+"Nobody."
+],
+[
+"Disabilitato",
+"Deaktiviert",
+"Disabled"
+],
+[
+"disabilitato",
+"deaktiviert",
+"disabled"
+],
+[
+"Disabilita",
+"Deaktivieren",
+"Disable"
+],
+[
+"· Rivenditore ·",
+"· Händler ·",
+"· Dealer ·"
+],
+[
+"· Rivenditore",
+"· Händler",
+"· Dealer"
+],
+[
+"· Admin Dentag",
+"· Admin Dentag",
+"· Dentag admin"
+],
+[
+"Email abilitata: ora la persona può fare “Primo accesso”.",
+"E-Mail freigeschaltet: die Person kann jetzt die „Erstanmeldung“ machen.",
+"Email enabled: the person can now do the “First login”."
+],
+[
+"Accesso aggiornato.",
+"Zugang aktualisiert.",
+"Access updated."
+],
+[
+"Togliere l'accesso a {0}?",
+"Zugang für {0} entfernen?",
+"Remove access for {0}?"
+],
+[
+"Questa email è già registrata come laboratorio. Usa un'altra email per l'accesso al back-end.",
+"Diese E-Mail ist bereits als Labor registriert. Für das Back-End eine andere E-Mail verwenden.",
+"This email is already registered as a lab. Use another email for back-end access."
+],
+[
+"Ruolo non valido",
+"Ungültige Rolle",
+"Invalid role"
+],
+[
+"Scegli il rivenditore",
+"Händler wählen",
+"Choose the dealer"
+],
+[
+"Non puoi disabilitare te stesso",
+"Du kannst dich nicht selbst deaktivieren",
+"You cannot disable yourself"
+],
+[
+"Valgono per gli export futuri; quelli già registrati mantengono il prezzo del momento.",
+"Gilt für künftige Exporte; bereits erfasste behalten den damaligen Preis.",
+"They apply to future exports; those already recorded keep the price at the time."
+],
+[
+"Prezzo per caso al laboratorio ({0})",
+"Preis pro Fall für das Labor ({0})",
+"Price per case for the lab ({0})"
+],
+[
+"Quota del rivenditore per caso ({0})",
+"Händleranteil pro Fall ({0})",
+"Dealer share per case ({0})"
+],
+[
+"Casi inclusi per ogni codice kit",
+"Inklusive Fälle pro Kit-Code",
+"Included cases per kit code"
+],
+[
+"Anche l'export delle scansioni Key Clinic conta come caso",
+"Auch der Export der Key-Clinic-Scans zählt als Fall",
+"Exporting the Key Clinic scans also counts as a case"
+],
+[
+"Impostazioni salvate.",
+"Einstellungen gespeichert.",
+"Settings saved."
+],
+[
+"La quota rivenditore deve stare tra 0 e il prezzo",
+"Der Händleranteil muss zwischen 0 und dem Preis liegen",
+"The dealer share must be between 0 and the price"
+],
+[
+"Casi per kit non validi",
+"Ungültige Fälle pro Kit",
+"Invalid cases per kit"
+],
+[
+"Si può chiudere solo un mese già finito.",
+"Nur ein bereits beendeter Monat kann abgeschlossen werden.",
+"Only a month that has ended can be closed."
+],
+[
+"Il nome è obbligatorio",
+"Der Name ist Pflicht",
+"The name is required"
+],
+[
+"Rivenditore non trovato",
+"Händler nicht gefunden",
+"Dealer not found"
+],
+[
+"Laboratorio non trovato",
+"Labor nicht gefunden",
+"Lab not found"
+],
+[
+"Dentag non può essere disattivata",
+"Dentag kann nicht deaktiviert werden",
+"Dentag cannot be deactivated"
+],
+[
+"sì",
+"ja",
+"yes"
+],
+[
+"no",
+"nein",
+"no"
+],
+[
+"Prezzo",
+"Preis",
+"Price"
+],
+[
+"Incluso",
+"Inklusive",
+"Included"
+],
+[
+"Stornato",
+"Storniert",
+"Reversed"
+],
+[
+"Nota",
+"Notiz",
+"Note"
+],
+[
+"Agente",
+"Agent",
+"Agent"
+],
+[
+"Quota Dentag",
+"Dentag-Anteil",
+"Dentag share"
+],
+[
+"Casi a pagamento",
+"Kostenpflichtige Fälle",
+"Paid cases"
+]
+];
+window.RC_LANG_INLINE = [["+ IVA", "+ MwSt.", "+ VAT"]];

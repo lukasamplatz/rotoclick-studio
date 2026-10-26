@@ -61,3 +61,8 @@
 .rc-demo code{font:600 12px var(--mono,ui-monospace,monospace);background:rgba(255,255,255,.1);padding:1px 5px;border-radius:4px;user-select:all}
 .rc-demo button{font:inherit;color:inherit;background:rgba(255,255,255,.12);border:0;border-radius:5px;padding:4px 8px;cursor:pointer;margin-top:6px}
 @media (max-width:640px){.rc-acct{margin-left:0;width:100%}.rc-chip{max-width:100%}}
+
+/* Tendina lingua */
+.rc-lang{font:600 12.5px/1 var(--body,system-ui,sans-serif);padding:7px 8px;border-radius:999px;border:1px solid var(--line,#d6dde5);background:var(--panel,#fff);color:var(--ink,#18212b);cursor:pointer}
+.rc-lang:hover{border-color:var(--accent,#1f5fbf)}
+.rc-lang:focus-visible{outline:2px solid var(--accent,#1f5fbf);outline-offset:2px}

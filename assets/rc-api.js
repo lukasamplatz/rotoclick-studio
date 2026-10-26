@@ -188,11 +188,16 @@
 
   /* --------------------------- utilità comuni --------------------------- */
   RC.esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  RC.euro = (n) => Number(n || 0).toLocaleString("it-IT", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " " + (cfg.VALUTA || "€");
-  RC.data = (s) => (s ? new Date(s).toLocaleDateString("it-IT") : "");
-  RC.dataOra = (s) => (s ? new Date(s).toLocaleString("it-IT", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" }) : "");
-  RC.nomeMese = (iso) => { const [y, m] = String(iso).split("-").map(Number); return new Date(y, m - 1, 1).toLocaleDateString("it-IT", { month: "long", year: "numeric" }); };
+  const loc = () => (RC.locale ? RC.locale() : "it-IT");
+  RC.euro = (n) => { try { return Number(n || 0).toLocaleString(loc(), { style: "currency", currency: cfg.VALUTA || "EUR" }); } catch (e) { return Number(n || 0).toFixed(2) + " " + (cfg.VALUTA || "EUR"); } };
+  RC.data = (s) => (s ? new Date(s).toLocaleDateString(loc()) : "");
+  RC.dataOra = (s) => (s ? new Date(s).toLocaleString(loc(), { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" }) : "");
+  RC.nomeMese = (iso) => { const [y, m] = String(iso).split("-").map(Number); return new Date(y, m - 1, 1).toLocaleDateString(loc(), { month: "long", year: "numeric" }); };
+  // dati (nomi, email, codici): mai tradotti
+  RC.dato = (v) => `<span translate="no">${RC.esc(v)}</span>`;
+  if (!RC.t) RC.t = (s, ...v) => (v.length ? s.replace(/\{(\d)\}/g, (_, i) => (v[i] != null ? v[i] : "")) : s);
   RC.csv = (nome, righe) => {
+    if (righe.length) righe = [righe[0].map((h) => RC.t(String(h))), ...righe.slice(1)];
     const s = righe.map((r) => r.map((v) => { v = v == null ? "" : String(v); return /[;"\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }).join(";")).join("\r\n");
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob(["﻿" + s], { type: "text/csv;charset=utf-8" }));

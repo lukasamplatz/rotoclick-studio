@@ -11,7 +11,7 @@ window.RC_CONFIG = {
   SUPABASE_URL: "",            // es. "https://abcdefghijkl.supabase.co"
   SUPABASE_ANON_KEY: "",       // Project Settings → API Keys → publishable (o anon) key
 
-  VALUTA: "€",
+  VALUTA: "EUR",               // codice ISO della valuta
   NOTA_PREZZO: "+ IVA",        // testo dopo il prezzo nel pop-up ("" per nasconderlo)
 
   // Link mostrati nella registrazione e nei messaggi d'errore

@@ -8,7 +8,7 @@
   const BOTTONI = { expModels: "modelli", expScans: "key-clinic" };
   let stato = null;          // risposta di stato_laboratorio() o null se non autenticato
   let lascia = false;        // true = il prossimo clic passa al tool (export autorizzato)
-  let acct = null;
+  let acct = null, box = null;
 
   const prezzo = () => RC.euro(stato && stato.prezzo_caso != null ? stato.prezzo_caso : 2) + (cfg.NOTA_PREZZO ? " " + cfg.NOTA_PREZZO : "");
   const link = (url, txt) => (url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(txt)}</a>` : esc(txt));
@@ -24,10 +24,10 @@
   }
 
   function disegnaAccount() {
-    if (!acct) return;
-    if (!stato) { acct.innerHTML = `<button class="rc-chip" type="button" data-a="login">Accedi / Registrati</button>`; return; }
+    if (!box) return;
+    if (!stato) { box.innerHTML = `<button class="rc-chip" type="button" data-a="login">Accedi / Registrati</button>`; return; }
     if (stato.ruolo !== "laboratorio") {
-      acct.innerHTML = `<a class="rc-chip" href="${esc(RC.base)}gestione/"><span class="nm">${esc(stato.email)}</span><span class="rc-tag">${esc(stato.ruolo)}</span></a>
+      box.innerHTML = `<a class="rc-chip" href="${esc(RC.base)}gestione/"><span class="nm" translate="no">${esc(stato.email)}</span><span class="rc-tag">${esc(stato.ruolo)}</span></a>
         <button class="rc-chip" type="button" data-a="esci">Esci</button>`;
       return;
     }
@@ -36,7 +36,7 @@
     else if (!stato.collegato) tag = `<span class="rc-tag warn">Inserisci codice kit</span>`;
     else if (stato.casi_gratuiti > 0) tag = `<span class="rc-tag ok">${stato.casi_gratuiti} casi inclusi</span>`;
     else tag = `<span class="rc-tag">${esc(prezzo())} a caso</span>`;
-    acct.innerHTML = `<button class="rc-chip" type="button" data-a="account"><span class="nm">${esc(stato.ragione_sociale)}</span>${tag}</button>`;
+    box.innerHTML = `<button class="rc-chip" type="button" data-a="account"><span class="nm" translate="no">${esc(stato.ragione_sociale)}</span>${tag}</button>`;
   }
 
   /* ---------------------------- finestre ---------------------------- */
@@ -84,7 +84,7 @@
       RC.busy(f.querySelector("button"), m, async () => {
         const r = await RC.auth.signUp(f.email.value.trim(), f.pw.value, { ragione_sociale: rs, piva });
         if (r.confermaEmail) {
-          RC.modal(`<h2>Controlla la tua email</h2><p>Ti abbiamo inviato un link a <b>${esc(f.email.value.trim())}</b>. Aprilo per confermare l'indirizzo, poi accedi.</p>
+          RC.modal(`<h2>Controlla la tua email</h2><p>Ti abbiamo inviato un link a <b>${RC.dato(f.email.value.trim())}</b>. Aprilo per confermare l'indirizzo, poi accedi.</p>
             <div class="rc-row end" style="margin-top:14px"><button class="rc-b pri" type="button" data-ok>OK</button></div>`)
             .el.querySelector("[data-ok]").addEventListener("click", RC.closeModal);
           return;
@@ -133,7 +133,7 @@
         await aggiorna();
         RC.modal(`<h2>Codice attivato</h2>
           <div class="rc-msg ok">+${r.casi_aggiunti} casi inclusi (${esc(r.tipo)}). Ora hai ${r.casi_gratuiti} casi inclusi disponibili.</div>
-          ${r.nuovo_collegamento ? `<p>Il tuo rivenditore è <b>${esc(r.rivenditore)}</b>: dopo i casi inclusi ogni export costa ${esc(prezzo())} e ti viene fatturato da lui a fine mese.</p>` : ""}
+          ${r.nuovo_collegamento ? `<p>Il tuo rivenditore è <b>${RC.dato(r.rivenditore)}</b>: dopo i casi inclusi ogni export costa ${esc(prezzo())} e ti viene fatturato da lui a fine mese.</p>` : ""}
           <div class="rc-row end" style="margin-top:14px"><button class="rc-b pri" type="button" data-ok>${dopo ? "Continua" : "OK"}</button></div>`)
           .el.querySelector("[data-ok]").addEventListener("click", () => { RC.closeModal(); if (dopo) dopo(); });
       });
@@ -143,16 +143,16 @@
   async function vistaAccount() {
     await aggiorna();
     if (!stato) return vistaLogin();
-    const m = RC.modal(`<h2>${esc(stato.ragione_sociale)}</h2>
+    const m = RC.modal(`<h2 translate="no">${esc(stato.ragione_sociale)}</h2>
       <dl class="rc-kv">
-        <dt>Email</dt><dd>${esc(stato.email)}</dd>
-        ${stato.piva ? `<dt>Partita IVA</dt><dd>${esc(stato.piva)}</dd>` : ""}
-        <dt>Rivenditore</dt><dd>${stato.collegato ? esc(stato.rivenditore) : "— inserisci il codice di un kit"}</dd>
+        <dt>Email</dt><dd translate="no">${esc(stato.email)}</dd>
+        ${stato.piva ? `<dt>Partita IVA</dt><dd translate="no">${esc(stato.piva)}</dd>` : ""}
+        <dt>Rivenditore</dt><dd>${stato.collegato ? RC.dato(stato.rivenditore) : "— inserisci il codice di un kit"}</dd>
         <dt>Casi inclusi</dt><dd>${stato.casi_gratuiti}</dd>
         <dt>Export a pagamento</dt><dd>${stato.export_mese} questo mese · ${esc(prezzo())} l'uno</dd>
-        <dt>Kit registrati</dt><dd>${stato.codici.length ? stato.codici.map((c) => esc(c.codice) + " <span class='rc-muted'>(" + esc(c.tipo) + ")</span>").join("<br>") : "nessuno"}</dd>
+        <dt>Kit registrati</dt><dd>${stato.codici.length ? stato.codici.map((c) => RC.dato(c.codice) + " <span class='rc-muted'>(" + esc(c.tipo) + ")</span>").join("<br>") : "nessuno"}</dd>
       </dl>
-      ${stato.bloccato ? `<div class="rc-msg bad">L'export è bloccato. Contatta ${esc(stato.rivenditore)}.</div>` : ""}
+      ${stato.bloccato ? `<div class="rc-msg bad">L'export è bloccato. Contatta ${RC.dato(stato.rivenditore)}.</div>` : ""}
       <div class="rc-row">
         <button class="rc-b pri" type="button" data-a="voucher">Inserisci codice kit</button>
         <button class="rc-b" type="button" data-a="storico">I miei export</button>
@@ -170,7 +170,7 @@
     try {
       const r = await RC.call("lista_export", {});
       m.el.querySelector(".rc-scroll").innerHTML = r.righe.length ? `<table class="rc-tbl"><thead><tr><th>Data</th><th>Tipo</th><th>Fatturato da</th><th class="n">Importo</th></tr></thead><tbody>
-        ${r.righe.map((x) => `<tr><td>${RC.dataOra(x.confermato_il)}</td><td>${x.tipo === "modelli" ? "Modelli" : "Key Clinic"}</td><td>${esc(x.rivenditore)}</td>
+        ${r.righe.map((x) => `<tr><td>${RC.dataOra(x.confermato_il)}</td><td>${x.tipo === "modelli" ? "Modelli" : "Key Clinic"}</td><td>${RC.dato(x.rivenditore)}</td>
           <td class="n">${x.stornato ? "stornato" : x.gratuito ? "incluso" : RC.euro(x.prezzo)}</td></tr>`).join("")}</tbody></table>`
         : `<p class="rc-muted">Nessun export finora.</p>`;
     } catch (e) { m.msg(e.message, "bad"); }
@@ -214,7 +214,7 @@
     if (!conta) corpo = `<div class="rc-msg ok">Questo export è gratuito.</div>`;
     else if (stato.casi_gratuiti > 0) corpo = `<div class="rc-price"><b>Caso incluso</b><span class="rc-muted">ne restano ${stato.casi_gratuiti - 1} dopo questo export</span></div>`;
     else corpo = `<div class="rc-price"><b>${esc(RC.euro(stato.prezzo_caso))}</b><span class="rc-muted">${esc(cfg.NOTA_PREZZO || "")}</span></div>
-      <p>Ti verrà addebitato da <b>${esc(stato.rivenditore)}</b> a fine mese.</p>`;
+      <p>Ti verrà addebitato da <b>${RC.dato(stato.rivenditore)}</b> a fine mese.</p>`;
     const m = RC.modal(`<h2>Esporta ${esc(nome)}</h2>${corpo}
       ${conta ? `<p class="rc-small rc-muted">Ogni export conta come un caso, anche se riesporti lo stesso lavoro: controlla i modelli prima di confermare.</p>` : ""}
       <div class="rc-msg"></div>
@@ -248,7 +248,10 @@
       if (a.dataset.a === "account") vistaAccount();
       if (a.dataset.a === "esci") esci();
     });
-    acct.innerHTML = `<span class="rc-chip" aria-busy="true">…</span>`;
+    acct.appendChild(RC.tendinaLingua());
+    box = document.createElement("span"); box.className = "rc-acct"; acct.appendChild(box);
+    box.innerHTML = `<span class="rc-chip" aria-busy="true">…</span>`;
+    RC.onLang(disegnaAccount);
     RC.onAuth((ev) => { if (ev === "PASSWORD_RECOVERY") vistaNuovaPassword(); else aggiorna(); });
     aggiorna();
     RC.barraAnteprima();

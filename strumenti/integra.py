@@ -18,6 +18,8 @@ BODY = (
     f"{INIZIO}\n"
     '<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.116.0/dist/umd/supabase.js"></script>\n'
     '<script src="config.js"></script>\n'
+    '<script src="assets/rc-lang-data.js"></script>\n'
+    '<script src="assets/rc-i18n.js"></script>\n'
     '<script src="assets/rc-api.js"></script>\n'
     '<script src="assets/rc-ui.js"></script>\n'
     '<script src="assets/rc-gate.js"></script>\n'

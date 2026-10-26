@@ -1,7 +1,7 @@
 /* RotoClick Studio — back-end per Dentag (admin) e rivenditori */
 (function () {
   "use strict";
-  const RC = window.RC, esc = RC.esc, euro = RC.euro;
+  const RC = window.RC, esc = RC.esc, euro = (v) => RC.euro(v), dato = (v) => RC.dato(v);
   const main = document.getElementById("main"), tabsEl = document.getElementById("tabs"), userEl = document.getElementById("user");
   let P = null;                 // mio_profilo()
   let tab = null;
@@ -20,7 +20,7 @@
     for (let k = 0; k < 24; k++) { const d = new Date(y, m - 1 - k, 1); out.push(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-01`); }
     return out;
   }
-  const selMese = () => `<select class="rc-in" data-mese aria-label="Mese">${mesi().map((x) => `<option value="${x}"${x === mese ? " selected" : ""}>${esc(RC.nomeMese(x))}</option>`).join("")}</select>`;
+  const selMese = () => `<select class="rc-in" data-mese aria-label="Mese" translate="no">${mesi().map((x) => `<option value="${x}"${x === mese ? " selected" : ""}>${esc(RC.nomeMese(x))}</option>`).join("")}</select>`;
   const legaMese = (fn) => { const s = main.querySelector("[data-mese]"); if (s) s.addEventListener("change", () => { mese = s.value; fn(); }); };
   const n = (v) => Number(v || 0);
   const tag = (t, c) => `<span class="rc-tag ${c || ""}">${esc(t)}</span>`;
@@ -28,7 +28,7 @@
   const erroreMain = (e) => { main.insertAdjacentHTML("afterbegin", `<div class="rc-msg bad">${esc(e.message || e)}</div>`); };
   async function rivenditori() { if (!cacheRiv) cacheRiv = (await RC.call("admin_rivenditori")).righe; return cacheRiv; }
   const optRiv = (lista, sel, vuotoTxt) => (vuotoTxt != null ? `<option value="">${esc(vuotoTxt)}</option>` : "") +
-    lista.filter((r) => r.attivo).map((r) => `<option value="${r.id}"${r.id === sel ? " selected" : ""}>${esc(r.nome)}</option>`).join("");
+    lista.filter((r) => r.attivo).map((r) => `<option value="${r.id}"${r.id === sel ? " selected" : ""} translate="no">${esc(r.nome)}</option>`).join("");
   const filtra = (input, tbody) => input.addEventListener("input", () => {
     const q = input.value.trim().toLowerCase();
     tbody.querySelectorAll("tr").forEach((tr) => { tr.hidden = q && !tr.textContent.toLowerCase().includes(q); });
@@ -98,7 +98,7 @@
     }
     mese = P.mese_corrente; cacheRiv = null;
     const ruoloTxt = { admin: "Dentag · admin", rivenditore: P.rivenditore ? P.rivenditore.nome : "Rivenditore" }[P.ruolo];
-    userEl.innerHTML = `<span class="rc-muted">${esc(P.nome || P.email)}</span>${tag(ruoloTxt)}<a class="rc-b sm" href="../">Tool</a><button class="rc-b sm" type="button" data-esci>Esci</button>`;
+    userEl.innerHTML = `<span class="rc-muted">${dato(P.nome || P.email)}</span>${tag(ruoloTxt)}<a class="rc-b sm" href="../">Tool</a><button class="rc-b sm" type="button" data-esci>Esci</button>`;
     userEl.querySelector("[data-esci]").addEventListener("click", esci);
     tabsEl.innerHTML = SEZIONI[P.ruolo].map(([k, t]) => `<button type="button" data-tab="${k}">${esc(t)}</button>`).join("");
     tabsEl.querySelectorAll("[data-tab]").forEach((b) => b.addEventListener("click", () => vai(b.dataset.tab)));
@@ -138,7 +138,7 @@
         ${mostraQuote ? `<div class="g-kpi"><span>Tua quota</span><b>${euro(T.q)}</b></div><div class="g-kpi"><span>Dovuto a Dentag</span><b>${euro(T.d)}</b></div>` : ""}
       </div>
       ${r.righe.length ? `<div class="g-tw"><table class="rc-tbl"><thead><tr><th>Laboratorio</th><th>P.IVA</th><th class="n">Inclusi</th><th class="n">A pagamento</th><th class="n">Totale cliente</th>${mostraQuote ? '<th class="n">Tua quota</th><th class="n">Dovuto a Dentag</th>' : ""}</tr></thead><tbody>
-        ${r.righe.map((x) => `<tr><td>${esc(x.laboratorio)}</td><td>${esc(x.piva || "")}</td><td class="n">${x.casi_gratuiti}</td><td class="n">${x.casi_pagati}</td><td class="n">${euro(x.totale_cliente)}</td>${mostraQuote ? `<td class="n">${euro(x.quota_rivenditore)}</td><td class="n">${euro(x.quota_dentag)}</td>` : ""}</tr>`).join("")}
+        ${r.righe.map((x) => `<tr><td>${dato(x.laboratorio)}</td><td>${dato(x.piva || "")}</td><td class="n">${x.casi_gratuiti}</td><td class="n">${x.casi_pagati}</td><td class="n">${euro(x.totale_cliente)}</td>${mostraQuote ? `<td class="n">${euro(x.quota_rivenditore)}</td><td class="n">${euro(x.quota_dentag)}</td>` : ""}</tr>`).join("")}
         <tr class="tot"><td>Totale</td><td></td><td class="n">${T.g}</td><td class="n">${T.p}</td><td class="n">${euro(T.c)}</td>${mostraQuote ? `<td class="n">${euro(T.q)}</td><td class="n">${euro(T.d)}</td>` : ""}</tr>
         </tbody></table></div>` : vuoto("Nessun export in questo mese.")}`;
     legaMese(() => riepilogo(rivSel));
@@ -150,7 +150,7 @@
     main.querySelector("[data-csvd]").addEventListener("click", async () => {
       const d = await RC.call("lista_export", { p_mese: mese, p_rivenditore: rivSel || null });
       RC.csv(nomeFile("export"), [["Data e ora", "Laboratorio", "P.IVA", "Rivenditore", "Tipo", "Incluso", "Prezzo", "Stornato"],
-        ...d.righe.map((x) => [RC.dataOra(x.confermato_il), x.laboratorio, x.piva, x.rivenditore, x.tipo, x.gratuito ? "sì" : "no", n(x.prezzo).toFixed(2).replace(".", ","), x.stornato ? "sì" : ""])]);
+        ...d.righe.map((x) => [RC.dataOra(x.confermato_il), x.laboratorio, x.piva, x.rivenditore, x.tipo, x.gratuito ? RC.t("sì") : RC.t("no"), n(x.prezzo).toFixed(2).replace(".", ","), x.stornato ? RC.t("sì") : ""])]);
     });
   }
 
@@ -170,7 +170,7 @@
         <div class="g-kpi"><span>Incasso Dentag</span><b>${euro(T.d + T.dir)}</b></div>
       </div>
       ${r.righe.length ? `<div class="g-tw"><table class="rc-tbl"><thead><tr><th>Rivenditore</th><th class="n">Laboratori</th><th class="n">Inclusi</th><th class="n">A pagamento</th><th class="n">Totale clienti</th><th class="n">Quota rivenditore</th><th class="n">Da fatturare al rivenditore</th></tr></thead><tbody>
-        ${r.righe.map((x) => `<tr class="click" data-riv="${x.rivenditore_id}"><td>${esc(x.rivenditore)} ${x.is_dentag ? tag("clienti diretti") : ""}</td><td class="n">${x.laboratori}</td><td class="n">${x.casi_gratuiti}</td><td class="n">${x.casi_pagati}</td><td class="n">${euro(x.totale_clienti)}</td><td class="n">${x.is_dentag ? "—" : euro(x.quota_rivenditore)}</td><td class="n">${x.is_dentag ? "fattura ai clienti" : euro(x.da_fatturare)}</td></tr>`).join("")}
+        ${r.righe.map((x) => `<tr class="click" data-riv="${x.rivenditore_id}"><td>${dato(x.rivenditore)} ${x.is_dentag ? tag("clienti diretti") : ""}</td><td class="n">${x.laboratori}</td><td class="n">${x.casi_gratuiti}</td><td class="n">${x.casi_pagati}</td><td class="n">${euro(x.totale_clienti)}</td><td class="n">${x.is_dentag ? "—" : euro(x.quota_rivenditore)}</td><td class="n">${x.is_dentag ? "fattura ai clienti" : euro(x.da_fatturare)}</td></tr>`).join("")}
         </tbody></table></div>` : vuoto("Nessun export in questo mese.")}`;
     legaMese(riepilogoAdmin);
     main.querySelectorAll("[data-riv]").forEach((tr) => tr.addEventListener("click", () => riepilogo(tr.dataset.riv)));
@@ -179,8 +179,8 @@
       ...r.righe.map((x) => [mese.slice(0, 7), x.rivenditore, x.piva, x.laboratori, x.casi_gratuiti, x.casi_pagati, n(x.totale_clienti).toFixed(2).replace(".", ","), n(x.quota_rivenditore).toFixed(2).replace(".", ","), n(x.da_fatturare).toFixed(2).replace(".", ",")])]));
     const ch = main.querySelector("[data-chiudi]");
     if (ch) ch.addEventListener("click", async () => {
-      if (!confirm(`Chiudere ${RC.nomeMese(mese)}? Dopo la chiusura non si possono più stornare export di quel mese.`)) return;
-      try { await RC.call("admin_chiudi_mese", { p_mese: mese }); riepilogoAdmin(); } catch (e) { alert(e.message); }
+      if (!confirm(RC.t("Chiudere {0}? Dopo la chiusura non si possono più stornare export di quel mese.", RC.nomeMese(mese)))) return;
+      try { await RC.call("admin_chiudi_mese", { p_mese: mese }); riepilogoAdmin(); } catch (e) { alert(RC.t(e.message)); }
     });
   }
 
@@ -190,7 +190,7 @@
     main.innerHTML = `<h1>Rivenditori</h1><p class="g-lead">I rivenditori abilitati ricevono codici kit e fatturano 2 € a caso ai propri clienti. Disattivando un rivenditore i suoi codici non usati vengono revocati e i suoi laboratori passano a Dentag.</p>
       <div class="g-bar"><input class="rc-in" type="search" placeholder="Cerca…" data-q><span class="sp"></span><button class="rc-b pri" type="button" data-nuovo>Nuovo rivenditore</button></div>
       <div class="g-tw"><table class="rc-tbl"><thead><tr><th>Nome</th><th>P.IVA</th><th>Email</th><th>Paese</th><th class="n">Laboratori</th><th class="n">Codici liberi</th><th class="n">Codici usati</th><th class="n">Accessi</th><th>Stato</th><th></th></tr></thead><tbody>
-      ${lista.map((r) => `<tr><td>${esc(r.nome)} ${r.is_dentag ? tag("Dentag") : ""}</td><td>${esc(r.piva || "")}</td><td>${esc(r.email || "")}</td><td>${esc(r.paese || "")}</td>
+      ${lista.map((r) => `<tr><td>${dato(r.nome)} ${r.is_dentag ? tag("Dentag") : ""}</td><td>${dato(r.piva || "")}</td><td>${dato(r.email || "")}</td><td>${esc(r.paese || "")}</td>
         <td class="n">${r.laboratori}</td><td class="n">${r.codici_disponibili}</td><td class="n">${r.codici_usati}</td><td class="n">${r.utenti}</td>
         <td>${r.attivo ? tag("attivo", "ok") : tag("disattivato", "bad")}</td>
         <td><div class="rc-row"><button class="rc-b sm" type="button" data-mod="${r.id}">Modifica</button>
@@ -201,10 +201,10 @@
     main.querySelectorAll("[data-mod]").forEach((b) => b.addEventListener("click", () => formRivenditore(lista.find((r) => r.id === b.dataset.mod))));
     main.querySelectorAll("[data-att]").forEach((b) => b.addEventListener("click", async () => {
       const r = lista.find((x) => x.id === b.dataset.att), on = b.dataset.v === "1";
-      if (!on && !confirm(`Disattivare ${r.nome}?\n\n• ${r.codici_disponibili} codici non usati verranno revocati\n• ${r.laboratori} laboratori passeranno a Dentag\n• gli export già fatti restano a suo carico`)) return;
+      if (!on && !confirm(RC.t("Disattivare {0}?", r.nome) + "\n\n• " + RC.t("{0} codici non usati verranno revocati", r.codici_disponibili) + "\n• " + RC.t("{0} laboratori passeranno a Dentag", r.laboratori) + "\n• " + RC.t("gli export già fatti restano a suo carico"))) return;
       try { const x = await RC.call("admin_stato_rivenditore", { p_id: r.id, p_attivo: on });
-        if (!on) alert(`${x.codici_revocati} codici revocati, ${x.laboratori_spostati} laboratori spostati a Dentag.`);
-        vistaRivenditori(); } catch (e) { alert(e.message); }
+        if (!on) alert(RC.t("{0} codici revocati, {1} laboratori spostati a Dentag.", x.codici_revocati, x.laboratori_spostati));
+        vistaRivenditori(); } catch (e) { alert(RC.t(e.message)); }
     }));
   }
 
@@ -234,7 +234,7 @@
       <p class="g-lead">${isAdmin() ? "Tutti i laboratori registrati. Quelli senza rivenditore non hanno ancora inserito un codice kit." : "I laboratori collegati a te tramite il codice del kit."}${nuovi ? " " + tag(nuovi + " nuovi negli ultimi 14 giorni", "ok") : ""}</p>
       <div class="g-bar"><input class="rc-in" type="search" placeholder="Cerca laboratorio, P.IVA, email…" data-q><span class="sp"></span><button class="rc-b" type="button" data-csv>Scarica (CSV)</button></div>
       ${lista.length ? `<div class="g-tw"><table class="rc-tbl"><thead><tr><th>Laboratorio</th><th>P.IVA</th><th>Email</th>${isAdmin() ? "<th>Rivenditore</th>" : ""}<th>Collegato il</th><th class="n">Kit</th><th class="n">Inclusi rimasti</th><th class="n">A pagamento (mese)</th><th>Stato</th>${puoBloccare ? "<th></th>" : ""}</tr></thead><tbody>
-      ${lista.map((l) => `<tr><td>${esc(l.ragione_sociale)} ${l.nuovo ? tag("nuovo", "ok") : ""}</td><td>${esc(l.piva || "")}</td><td>${esc(l.email)}</td>
+      ${lista.map((l) => `<tr><td>${dato(l.ragione_sociale)} ${l.nuovo ? tag("nuovo", "ok") : ""}</td><td>${dato(l.piva || "")}</td><td>${dato(l.email)}</td>
         ${isAdmin() ? `<td>${l.rivenditore ? esc(l.rivenditore) : tag("senza codice", "warn")}</td>` : ""}
         <td>${RC.data(l.collegato_il)}</td><td class="n">${l.kit}</td><td class="n">${l.casi_gratuiti}</td><td class="n">${l.pagati_mese}</td>
         <td>${l.bloccato ? tag("export bloccato", "bad") : l.rivenditore_id ? tag("attivo", "ok") : tag("demo", "warn")}</td>
@@ -244,18 +244,18 @@
     const q = main.querySelector("[data-q]"), tb = main.querySelector("tbody"); if (tb) filtra(q, tb);
     main.querySelector("[data-csv]").addEventListener("click", () => RC.csv("rotoclick-laboratori.csv", [
       ["Laboratorio", "P.IVA", "Email", "Rivenditore", "Registrato il", "Collegato il", "Kit", "Casi inclusi rimasti", "A pagamento mese", "A pagamento totale", "Bloccato"],
-      ...lista.map((l) => [l.ragione_sociale, l.piva, l.email, l.rivenditore, RC.data(l.creato_il), RC.data(l.collegato_il), l.kit, l.casi_gratuiti, l.pagati_mese, l.pagati_totale, l.bloccato ? "sì" : ""])]));
+      ...lista.map((l) => [l.ragione_sociale, l.piva, l.email, l.rivenditore, RC.data(l.creato_il), RC.data(l.collegato_il), l.kit, l.casi_gratuiti, l.pagati_mese, l.pagati_totale, l.bloccato ? RC.t("sì") : ""])]));
     main.querySelectorAll("[data-blk]").forEach((b) => b.addEventListener("click", async () => {
       const l = lista.find((x) => x.id === b.dataset.blk), on = b.dataset.v === "1";
-      if (on && !confirm(`Bloccare l'export per ${l.ragione_sociale}? Potrà ancora usare il tool ma non esportare.`)) return;
-      try { await RC.call("blocca_laboratorio", { p_lab: l.id, p_bloccato: on }); vistaLaboratori(); } catch (e) { alert(e.message); }
+      if (on && !confirm(RC.t("Bloccare l'export per {0}? Potrà ancora usare il tool ma non esportare.", l.ragione_sociale))) return;
+      try { await RC.call("blocca_laboratorio", { p_lab: l.id, p_bloccato: on }); vistaLaboratori(); } catch (e) { alert(RC.t(e.message)); }
     }));
     main.querySelectorAll("[data-sposta]").forEach((b) => b.addEventListener("click", () => spostaLab(lista.find((x) => x.id === b.dataset.sposta))));
   }
 
   async function spostaLab(l) {
     const riv = await rivenditori();
-    const m = RC.modal(`<h2>Sposta ${esc(l.ragione_sociale)}</h2><p class="rc-muted">Gli export già fatti restano al rivenditore attuale; da ora in poi fattura il nuovo.</p>
+    const m = RC.modal(`<h2>Sposta ${dato(l.ragione_sociale)}</h2><p class="rc-muted">Gli export già fatti restano al rivenditore attuale; da ora in poi fattura il nuovo.</p>
       <form class="rc-form" novalidate><label>Rivenditore<select class="rc-in" name="riv">${optRiv(riv, l.rivenditore_id)}</select></label>
       <div class="rc-msg"></div><button class="rc-b pri" type="submit">Sposta</button></form>`);
     const f = m.el.querySelector("form");
@@ -277,9 +277,9 @@
         <span class="sp"></span><button class="rc-b" type="button" data-csv>Scarica (CSV)</button></div>
       ${lista.length ? `<div class="g-tw"><table class="rc-tbl"><thead><tr>${isAdmin() ? '<th><input type="checkbox" data-all aria-label="Seleziona tutti"></th>' : ""}<th>Codice</th><th>Tipo</th><th>Lotto</th><th>Stato</th>${isAdmin() ? "<th>Rivenditore</th>" : ""}<th>Laboratorio</th><th>Usato il</th></tr></thead><tbody>
       ${lista.map((c) => `<tr data-st="${c.stato}">${isAdmin() ? `<td>${c.stato === "disponibile" ? `<input type="checkbox" data-c="${esc(c.codice)}" aria-label="Seleziona">` : ""}</td>` : ""}
-        <td class="code">${esc(c.codice_stampato)}</td><td>${esc(c.tipo)}</td><td>${esc(c.lotto || "")}</td>
+        <td class="code">${dato(c.codice_stampato)}</td><td>${esc(c.tipo)}</td><td>${dato(c.lotto || "")}</td>
         <td>${c.stato === "disponibile" ? tag("disponibile") : c.stato === "usato" ? tag("usato", "ok") : tag("revocato", "bad")}</td>
-        ${isAdmin() ? `<td>${c.rivenditore ? esc(c.rivenditore) : tag("non assegnato", "warn")}</td>` : ""}<td>${esc(c.laboratorio || "")}</td><td>${RC.data(c.usato_il)}</td></tr>`).join("")}
+        ${isAdmin() ? `<td>${c.rivenditore ? esc(c.rivenditore) : tag("non assegnato", "warn")}</td>` : ""}<td>${dato(c.laboratorio || "")}</td><td>${RC.data(c.usato_il)}</td></tr>`).join("")}
       </tbody></table></div>` : vuoto("Nessun codice.")}`;
     const q = main.querySelector("[data-q]"), st = main.querySelector("[data-st]"), tb = main.querySelector("tbody");
     const applica = () => { const t = q.value.trim().toLowerCase(); tb && tb.querySelectorAll("tr").forEach((tr) => { tr.hidden = (t && !tr.textContent.toLowerCase().includes(t)) || (st.value && tr.dataset.st !== st.value); }); };
@@ -307,8 +307,8 @@
         await RC.call("admin_assegna_codici", { p_codici: cods, p_rivenditore: f.riv.value || null, p_agente: null }); m.close(); vistaCodici(); }); });
     });
     main.querySelector("[data-rev]").addEventListener("click", async () => {
-      const cods = selezionati(); if (!confirm(`Revocare ${cods.length} codici? Non potranno più essere usati.`)) return;
-      try { await RC.call("admin_revoca_codici", { p_codici: cods }); vistaCodici(); } catch (e) { alert(e.message); }
+      const cods = selezionati(); if (!confirm(RC.t("Revocare {0} codici? Non potranno più essere usati.", cods.length))) return;
+      try { await RC.call("admin_revoca_codici", { p_codici: cods }); vistaCodici(); } catch (e) { alert(RC.t(e.message)); }
     });
   }
 
@@ -349,21 +349,21 @@
   async function vistaExport(rivFiltro) {
     const [d, riv] = await Promise.all([RC.call("lista_export", { p_mese: mese, p_rivenditore: rivFiltro || null }), isAdmin() ? rivenditori() : Promise.resolve([])]);
     main.innerHTML = `<h1>Export</h1><p class="g-lead">Ogni export confermato da un laboratorio, con data e ora. È la prova in caso di contestazione${isAdmin() ? "; un errore evidente si storna finché il mese non è chiuso" : ""}.</p>
-      <div class="g-bar">${selMese()}${isAdmin() ? `<select class="rc-in" data-riv><option value="">Tutti i rivenditori</option>${riv.map((r) => `<option value="${r.id}"${r.id === rivFiltro ? " selected" : ""}>${esc(r.nome)}</option>`).join("")}</select>` : ""}
+      <div class="g-bar">${selMese()}${isAdmin() ? `<select class="rc-in" data-riv><option value="">Tutti i rivenditori</option>${riv.map((r) => `<option value="${r.id}"${r.id === rivFiltro ? " selected" : ""} translate="no">${esc(r.nome)}</option>`).join("")}</select>` : ""}
         <input class="rc-in" type="search" placeholder="Cerca laboratorio…" data-q><span class="sp"></span><button class="rc-b" type="button" data-csv>Scarica (CSV)</button></div>
       ${d.righe.length ? `<div class="g-tw"><table class="rc-tbl"><thead><tr><th>Data e ora</th><th>Laboratorio</th>${isAdmin() ? "<th>Rivenditore</th>" : ""}<th>Tipo</th><th class="n">Importo</th><th>Stato</th>${isAdmin() ? "<th></th>" : ""}</tr></thead><tbody>
-      ${d.righe.map((x) => `<tr><td>${RC.dataOra(x.confermato_il)}</td><td>${esc(x.laboratorio)}</td>${isAdmin() ? `<td>${esc(x.rivenditore)}</td>` : ""}<td>${x.tipo === "modelli" ? "Modelli" : "Key Clinic"}</td>
-        <td class="n">${x.gratuito ? "incluso" : euro(x.prezzo)}</td><td>${x.stornato ? tag("stornato", "bad") + (x.nota_storno ? ` <span class="rc-muted rc-small">${esc(x.nota_storno)}</span>` : "") : ""}</td>
+      ${d.righe.map((x) => `<tr><td>${RC.dataOra(x.confermato_il)}</td><td>${dato(x.laboratorio)}</td>${isAdmin() ? `<td>${dato(x.rivenditore)}</td>` : ""}<td>${x.tipo === "modelli" ? "Modelli" : "Key Clinic"}</td>
+        <td class="n">${x.gratuito ? "incluso" : euro(x.prezzo)}</td><td>${x.stornato ? tag("stornato", "bad") + (x.nota_storno ? ` <span class="rc-muted rc-small">${dato(x.nota_storno)}</span>` : "") : ""}</td>
         ${isAdmin() ? `<td>${x.stornato ? "" : `<button class="rc-b sm" type="button" data-storna="${x.id}">Storna</button>`}</td>` : ""}</tr>`).join("")}
       </tbody></table></div>` : vuoto("Nessun export in questo mese.")}`;
     legaMese(() => vistaExport(rivFiltro));
     const sr = main.querySelector("[data-riv]"); if (sr) sr.addEventListener("change", () => vistaExport(sr.value || null));
     const tb = main.querySelector("tbody"); if (tb) filtra(main.querySelector("[data-q]"), tb);
     main.querySelector("[data-csv]").addEventListener("click", () => RC.csv(`rotoclick-export-${mese.slice(0, 7)}.csv`, [["Data e ora", "Laboratorio", "P.IVA", "Rivenditore", "Tipo", "Incluso", "Prezzo", "Quota rivenditore", "Quota Dentag", "Stornato", "Nota"],
-      ...d.righe.map((x) => [RC.dataOra(x.confermato_il), x.laboratorio, x.piva, x.rivenditore, x.tipo, x.gratuito ? "sì" : "no", n(x.prezzo).toFixed(2).replace(".", ","), n(x.quota_rivenditore).toFixed(2).replace(".", ","), n(x.quota_dentag).toFixed(2).replace(".", ","), x.stornato ? "sì" : "", x.nota_storno])]));
+      ...d.righe.map((x) => [RC.dataOra(x.confermato_il), x.laboratorio, x.piva, x.rivenditore, x.tipo, x.gratuito ? RC.t("sì") : RC.t("no"), n(x.prezzo).toFixed(2).replace(".", ","), n(x.quota_rivenditore).toFixed(2).replace(".", ","), n(x.quota_dentag).toFixed(2).replace(".", ","), x.stornato ? RC.t("sì") : "", x.nota_storno])]));
     main.querySelectorAll("[data-storna]").forEach((b) => b.addEventListener("click", () => {
       const x = d.righe.find((r) => String(r.id) === b.dataset.storna);
-      const m = RC.modal(`<h2>Storna export</h2><p>${esc(x.laboratorio)} · ${RC.dataOra(x.confermato_il)} · ${x.gratuito ? "caso incluso (torna disponibile)" : euro(x.prezzo)}</p>
+      const m = RC.modal(`<h2>Storna export</h2><p>${dato(x.laboratorio)} · ${RC.dataOra(x.confermato_il)} · ${x.gratuito ? "caso incluso (torna disponibile)" : euro(x.prezzo)}</p>
         <form class="rc-form" novalidate><label>Motivo<input class="rc-in" name="nota" placeholder="es. export doppio per errore"></label><div class="rc-msg"></div><button class="rc-b pri" type="submit">Storna</button></form>`);
       const f = m.el.querySelector("form");
       f.addEventListener("submit", (e) => { e.preventDefault(); RC.busy(f.querySelector("button"), m, async () => { await RC.call("admin_storna_export", { p_id: x.id, p_nota: f.nota.value }); m.close(); vistaExport(rivFiltro); }); });
@@ -384,10 +384,10 @@
           <label data-wr>Rivenditore<select class="rc-in" name="riv">${optRiv(riv.filter((r) => !r.is_dentag), null, "— scegli")}</select></label>
           <div class="rc-msg"></div><button class="rc-b pri" type="submit">Abilita</button></form></div>
         <div class="g-card"><h2>In attesa di primo accesso</h2>
-          ${u.inviti.length ? `<table class="rc-tbl"><tbody>${u.inviti.map((i) => `<tr><td>${esc(i.email)}<br><span class="rc-muted rc-small">${esc(i.nome || "")} · ${esc(R[i.ruolo])}${i.rivenditore ? " · " + esc(i.rivenditore) : ""}</span></td>
+          ${u.inviti.length ? `<table class="rc-tbl"><tbody>${u.inviti.map((i) => `<tr><td>${dato(i.email)}<br><span class="rc-muted rc-small">${dato(i.nome || "")} · ${esc(R[i.ruolo])}${i.rivenditore ? " · " + esc(i.rivenditore) : ""}</span></td>
             <td><button class="rc-b sm bad" type="button" data-dis="${esc(i.email)}">Annulla</button></td></tr>`).join("")}</tbody></table>` : `<p class="rc-muted">Nessuno.</p>`}</div></div>
       <div class="g-tw"><table class="rc-tbl"><thead><tr><th>Email</th><th>Nome</th><th>Ruolo</th><th>Rivenditore</th><th></th></tr></thead><tbody>
-      ${u.utenti.map((x) => `<tr><td>${esc(x.email)}</td><td>${esc(x.nome || "")}</td><td>${x.ruolo === "disabilitato" ? tag("disabilitato", "bad") : esc(R[x.ruolo])}</td><td>${esc(x.rivenditore || "")}</td>
+      ${u.utenti.map((x) => `<tr><td>${dato(x.email)}</td><td>${dato(x.nome || "")}</td><td>${x.ruolo === "disabilitato" ? tag("disabilitato", "bad") : esc(R[x.ruolo])}</td><td>${dato(x.rivenditore || "")}</td>
         <td>${x.ruolo !== "disabilitato" && x.email !== P.email ? `<button class="rc-b sm bad" type="button" data-dis="${esc(x.email)}">Disabilita</button>` : ""}</td></tr>`).join("")}
       </tbody></table></div>`;
     const f = main.querySelector("#fi"), box = { msg: (t, c) => { const m = f.querySelector(".rc-msg"); m.className = "rc-msg " + (c || ""); m.textContent = t || ""; } };
@@ -399,8 +399,8 @@
       main.querySelector("#fi .rc-msg").textContent = r.aggiornato ? "Accesso aggiornato." : "Email abilitata: ora la persona può fare “Primo accesso”.";
     }); });
     main.querySelectorAll("[data-dis]").forEach((b) => b.addEventListener("click", async () => {
-      if (!confirm(`Togliere l'accesso a ${b.dataset.dis}?`)) return;
-      try { await RC.call("admin_disabilita_accesso", { p_email: b.dataset.dis }); vistaAccessi(); } catch (e) { alert(e.message); }
+      if (!confirm(RC.t("Togliere l'accesso a {0}?", b.dataset.dis))) return;
+      try { await RC.call("admin_disabilita_accesso", { p_email: b.dataset.dis }); vistaAccessi(); } catch (e) { alert(RC.t(e.message)); }
     }));
   }
 
@@ -409,8 +409,8 @@
     P = await RC.call("mio_profilo"); const i = P.impostazioni;
     main.innerHTML = `<h1>Impostazioni</h1><p class="g-lead">Valgono per gli export futuri; quelli già registrati mantengono il prezzo del momento.</p>
       <div class="g-card" style="max-width:520px"><form class="rc-form" novalidate id="fs">
-        <label>Prezzo per caso al laboratorio (${esc(RC.cfg.VALUTA || "€")})<input class="rc-in" type="number" step="0.01" min="0" name="prezzo" value="${n(i.prezzo_caso)}"></label>
-        <label>Quota del rivenditore per caso (${esc(RC.cfg.VALUTA || "€")})<input class="rc-in" type="number" step="0.01" min="0" name="quota" value="${n(i.quota_rivenditore)}"></label>
+        <label>Prezzo per caso al laboratorio (${esc(RC.cfg.VALUTA || "EUR")})<input class="rc-in" type="number" step="0.01" min="0" name="prezzo" value="${n(i.prezzo_caso)}"></label>
+        <label>Quota del rivenditore per caso (${esc(RC.cfg.VALUTA || "EUR")})<input class="rc-in" type="number" step="0.01" min="0" name="quota" value="${n(i.quota_rivenditore)}"></label>
         <label>Casi inclusi per ogni codice kit<input class="rc-in" type="number" step="1" min="0" name="casi" value="${i.casi_per_kit}"></label>
         <label class="rc-check"><input type="checkbox" name="kc"${i.key_clinic_conta ? " checked" : ""}><span>Anche l'export delle scansioni Key Clinic conta come caso</span></label>
         <div class="rc-msg"></div><button class="rc-b pri" type="submit">Salva</button></form></div>`;
@@ -422,6 +422,8 @@
   }
 
   RC.onAuth((ev) => { if (ev === "PASSWORD_RECOVERY") nuovaPassword(); });
+  document.getElementById("lang").appendChild(RC.tendinaLingua());
+  RC.onLang(() => { if (P && tab && SEZIONI[P.ruolo]) vai(tab); });
   RC.barraAnteprima();
   avvio().catch((e) => { main.innerHTML = ""; erroreMain(e); });
 })();
