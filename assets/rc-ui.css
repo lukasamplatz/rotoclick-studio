@@ -1,0 +1,63 @@
+/* RotoClick Studio — stili condivisi (finestre, moduli, account).
+   Usa le variabili colore del tool; i valori dopo la virgola valgono dove mancano. */
+.rc-ov{position:fixed;inset:0;z-index:1000;background:rgba(10,16,24,.55);display:flex;align-items:flex-start;justify-content:center;padding:6vh 16px 16px;overflow:auto}
+.rc-dlg{width:100%;max-width:440px;background:var(--panel,#fff);color:var(--ink,#18212b);border:1px solid var(--line,#d6dde5);border-radius:10px;box-shadow:0 18px 48px rgba(0,0,0,.25);padding:22px 22px 18px;font:14px/1.5 var(--body,system-ui,sans-serif);position:relative}
+.rc-dlg.wide{max-width:720px}
+.rc-dlg h2{font:800 19px/1.25 var(--display,system-ui,sans-serif);margin:0 0 6px;padding-right:28px}
+.rc-dlg p{margin:6px 0}
+.rc-dlg .rc-x{position:absolute;top:12px;right:12px;border:0;background:none;color:var(--muted,#5d6a78);font-size:22px;line-height:1;cursor:pointer;padding:4px 8px;border-radius:6px}
+.rc-dlg .rc-x:hover{color:var(--ink,#18212b);background:var(--accent-soft,#e3ecf9)}
+.rc-muted{color:var(--muted,#5d6a78)}
+.rc-small{font-size:12.5px}
+.rc-form{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.rc-form label{display:flex;flex-direction:column;gap:4px;font-weight:600;font-size:13px}
+.rc-form label.rc-check{flex-direction:row;align-items:flex-start;gap:8px;font-weight:400}
+.rc-form label.rc-check input{margin-top:3px}
+.rc-in{font:14px var(--body,system-ui,sans-serif);padding:9px 11px;border:1px solid var(--line,#d6dde5);border-radius:6px;background:var(--bg,#eef1f4);color:var(--ink,#18212b);width:100%;box-sizing:border-box}
+.rc-in:focus{outline:2px solid var(--accent,#1f5fbf);outline-offset:0;border-color:transparent}
+.rc-in.code{font:600 18px var(--mono,ui-monospace,monospace);letter-spacing:.08em;text-transform:uppercase;text-align:center}
+.rc-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.rc-row.end{justify-content:flex-end}
+.rc-b{display:inline-block;text-decoration:none;font:600 13px/1 var(--body,system-ui,sans-serif);padding:10px 14px;border-radius:6px;border:1px solid var(--line,#d6dde5);background:var(--panel,#fff);color:var(--ink,#18212b);cursor:pointer;white-space:nowrap}
+.rc-b:hover{border-color:var(--accent,#1f5fbf)}
+.rc-b:focus-visible{outline:2px solid var(--accent,#1f5fbf);outline-offset:2px}
+.rc-b.pri{background:var(--accent,#1f5fbf);border-color:var(--accent,#1f5fbf);color:var(--accent-ink,#fff)}
+.rc-b.bad{color:var(--bad,#c62828)}
+.rc-b[disabled]{opacity:.5;cursor:not-allowed}
+.rc-b.sm{padding:6px 9px;font-size:12px}
+.rc-link{background:none;border:0;padding:0;color:var(--accent,#1f5fbf);font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.rc-msg{padding:9px 11px;border-radius:6px;font-size:13px;margin-top:10px}
+.rc-msg:empty{display:none}
+.rc-msg.ok{background:color-mix(in srgb,var(--ok,#23864a) 14%,transparent);color:var(--ink,#18212b)}
+.rc-msg.bad{background:color-mix(in srgb,var(--bad,#c62828) 14%,transparent);color:var(--ink,#18212b)}
+.rc-msg.warn{background:color-mix(in srgb,var(--warn,#c7740f) 16%,transparent);color:var(--ink,#18212b)}
+.rc-price{display:flex;align-items:baseline;gap:10px;margin:14px 0 6px;padding:14px;border:1px solid var(--line,#d6dde5);border-radius:8px;background:var(--bg,#eef1f4)}
+.rc-price b{font:800 26px/1 var(--display,system-ui,sans-serif)}
+.rc-kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:10px 0;font-size:13.5px}
+.rc-kv dt{color:var(--muted,#5d6a78)}
+.rc-kv dd{margin:0;font-weight:600}
+.rc-tbl{width:100%;border-collapse:collapse;font-size:13px}
+.rc-tbl th,.rc-tbl td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line,#d6dde5);vertical-align:top}
+.rc-tbl th{font-weight:600;color:var(--muted,#5d6a78);font-size:12px}
+.rc-tbl td.n,.rc-tbl th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.rc-scroll{max-height:42vh;overflow:auto;margin-top:8px}
+.rc-hr{border:0;border-top:1px solid var(--line,#d6dde5);margin:16px 0 12px}
+
+/* Account nella barra del tool */
+.rc-acct{margin-left:auto;display:flex;align-items:center;gap:8px}
+.rc-chip{display:inline-flex;align-items:center;gap:8px;font:600 13px/1 var(--body,system-ui,sans-serif);padding:7px 11px;border-radius:999px;border:1px solid var(--line,#d6dde5);background:var(--panel,#fff);color:var(--ink,#18212b);cursor:pointer;max-width:340px}
+.rc-chip:hover{border-color:var(--accent,#1f5fbf)}
+.rc-chip .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rc-tag{font:600 11px/1 var(--body,system-ui,sans-serif);padding:4px 7px;border-radius:999px;background:var(--accent-soft,#e3ecf9);color:var(--ink,#18212b);white-space:nowrap}
+.rc-tag.warn{background:color-mix(in srgb,var(--warn,#c7740f) 22%,transparent)}
+.rc-tag.bad{background:color-mix(in srgb,var(--bad,#c62828) 22%,transparent)}
+.rc-tag.ok{background:color-mix(in srgb,var(--ok,#23864a) 20%,transparent)}
+
+/* Barra modalità anteprima */
+.rc-demo{position:fixed;left:50%;transform:translateX(-50%);bottom:12px;z-index:900;max-width:min(560px,calc(100vw - 24px));background:#2b2210;color:#fbe9c4;border-radius:8px;font:12.5px/1.45 var(--body,system-ui,sans-serif);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.rc-demo summary{cursor:pointer;padding:8px 12px;font-weight:600;list-style:none}
+.rc-demo summary::-webkit-details-marker{display:none}
+.rc-demo .in{padding:0 12px 10px}
+.rc-demo code{font:600 12px var(--mono,ui-monospace,monospace);background:rgba(255,255,255,.1);padding:1px 5px;border-radius:4px;user-select:all}
+.rc-demo button{font:inherit;color:inherit;background:rgba(255,255,255,.12);border:0;border-radius:5px;padding:4px 8px;cursor:pointer;margin-top:6px}
+@media (max-width:640px){.rc-acct{margin-left:0;width:100%}.rc-chip{max-width:100%}}
