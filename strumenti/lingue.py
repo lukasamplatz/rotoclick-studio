@@ -244,6 +244,16 @@ T = [
 ("Attachment", "Attachment", "Attachment"),
 ("BASE_V7", "BASE_V7", "BASE_V7"), ("DRAIN-HOLES", "DRAIN-HOLES", "DRAIN-HOLES"),
 ("Riempimento", "Füllung", "Infill"),
+("Base", "Sockel", "Base"),
+("Standard", "Standard", "Standard"),
+("Ortho (Tweed)", "Ortho (Tweed)", "Ortho (Tweed)"),
+("Piano dello zoccolo dal fornice", "Sockelebene ab Umschlagfalte", "Base plane from the fornix"),
+("Distanza dall'arcata", "Abstand zum Zahnbogen", "Distance from the arch"),
+("Proposto al fornice: + = zoccolo più alto (copre più gengiva), − = più basso", "An der Umschlagfalte vorgeschlagen: + = höherer Sockel (deckt mehr Gingiva), − = niedriger", "Proposed at the fornix: + = higher base (covers more gingiva), − = lower"),
+("Zoccolo squadrato Tweed/ABO: retro perpendicolare alla linea mediana, lati a 65° (sup.) e 55° (inf.), talloni smussati; superiore a punta, inferiore arrotondato da canino a canino. Il piano dello zoccolo è proposto al fornice e si sposta in mm.", "Eckiger Sockel nach Tweed/ABO: Rückseite senkrecht zur Mittellinie, Seiten 65° (OK) und 55° (UK), Fersen abgeschrägt; OK spitz, UK von Eckzahn zu Eckzahn gerundet. Die Sockelebene wird an der Umschlagfalte vorgeschlagen und lässt sich in mm verschieben.", "Squared Tweed/ABO base: back perpendicular to the midline, sides at 65° (upper) and 55° (lower), bevelled heels; upper pointed, lower rounded from canine to canine. The base plane is proposed at the fornix and can be moved in mm."),
+("senza monconi, base standard o Ortho", "ohne Stümpfe, Standard- oder Ortho-Sockel", "without dies, standard or Ortho base"),
+("zoccolo Ortho: piano a {0} mm dalla piastra (fornice {1} mm)", "Ortho-Sockel: Ebene {0} mm von der Platte (Umschlagfalte {1} mm)", "Ortho base: plane {0} mm from the plate (fornix {1} mm)"),
+("zoccolo Ortho: piano a {0} mm dalla piastra (fornice {1} mm), palato mantenuto", "Ortho-Sockel: Ebene {0} mm von der Platte (Umschlagfalte {1} mm), Gaumen erhalten", "Ortho base: plane {0} mm from the plate (fornix {1} mm), palate kept"),
 ("Nido d'ape", "Wabe", "Honeycomb"),
 ("Cavo", "Hohl", "Hollow"),
 ("Pieno", "Massiv", "Solid"),
@@ -363,6 +373,7 @@ T = [
 ("supporti per la stampa", "Druckstützen", "print supports"),
 ("La scansione supera lo spazio disponibile con {0}. Scegli una piastra più alta o riposiziona nella fase 3.", "Der Scan überschreitet den verfügbaren Raum mit {0}. Höhere Platte wählen oder in Schritt 3 neu positionieren.", "The scan exceeds the available space with {0}. Choose a higher plate or reposition in step 3."),
 ("Modelli {0} {1} pronti. Resina: sup", "Modelle {0} {1} fertig. Harz: OK", "{1} models {0} ready. Resin: upper"),
+("Modelli {0} / {1} {2} pronti. Resina: sup", "Modelle {0} / {1} {2} fertig. Harz: OK", "{2} models {0} / {1} ready. Resin: upper"),
 ("pieni", "massiv", "solid"), ("cavi", "hohl", "hollow"), ("a nido d'ape", "mit Wabe", "honeycomb"),
 (", inf", ", UK", ", lower"),
 ("(attachment incluso).", "(inkl. Attachment).", "(attachment included)."),
@@ -678,6 +689,7 @@ T = [
 ("{0} codici generati", "{0} Codes erzeugt", "{0} codes generated"),
 ("Scarica per le etichette (CSV)", "Für Etiketten herunterladen (CSV)", "Download for labels (CSV)"),
 ("Fatto", "Fertig", "Done"),
+("Fine", "Fertig", "Done"),
 ("Incolla almeno un codice.", "Mindestens einen Code einfügen.", "Paste at least one code."),
 ("Importati {0}.", "{0} importiert.", "{0} imported."),
 ("Già presenti: {0}.", "Bereits vorhanden: {0}.", "Already present: {0}."),
@@ -748,6 +760,8 @@ T = [
 
 # Sostituzioni dentro i valori variabili (es. il prezzo "2,00 € + IVA")
 IN_LINEA = [("+ IVA", "+ MwSt.", "+ VAT")]
+# Prefissi delle note del calcolo: "Sup: <nota>" → si traduce la nota e il prefisso
+PREFISSI = [("Sup: ", "OK: ", "Upper: "), ("Inf: ", "UK: ", "Lower: ")]
 
 
 def main():
@@ -762,7 +776,8 @@ def main():
     out = Path(__file__).resolve().parent.parent / "assets" / "rc-lang-data.js"
     js = ("/* Generato da strumenti/lingue.py — non modificare a mano. */\n"
           "window.RC_LANG_DATA = " + json.dumps(righe, ensure_ascii=False, indent=0) + ";\n"
-          "window.RC_LANG_INLINE = " + json.dumps([list(x) for x in IN_LINEA], ensure_ascii=False) + ";\n")
+          "window.RC_LANG_INLINE = " + json.dumps([list(x) for x in IN_LINEA], ensure_ascii=False) + ";\n"
+          "window.RC_LANG_PREFIX = " + json.dumps([list(x) for x in PREFISSI], ensure_ascii=False) + ";\n")
     out.write_text(js, encoding="utf-8")
     print(f"{len(righe)} frasi → {out}")
 

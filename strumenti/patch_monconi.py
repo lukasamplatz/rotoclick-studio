@@ -70,31 +70,26 @@ MAIN = [
 ]
 
 
-def main():
-    if len(sys.argv) != 3:
-        sys.exit(__doc__)
-    src = open(sys.argv[1], encoding="utf-8").read()
-    if 'name="dtipo"' in src:
-        sys.exit("Il tool contiene già la scelta del tipo di moncone.")
-
-    m = re.search(r'<script id="rcMain">', src) or re.search(r'<script[^>]*id="rcMain"[^>]*>', src)
+def applica(src, HTML, MAIN, marcatore, nome="modifica"):
+    """Applica modifiche all'HTML e al codice principale del tool, riallineando i tratti del worker."""
+    if marcatore in src:
+        raise SystemExit(f"Il tool contiene già: {nome}.")
+    m = re.search(r'<script[^>]*id="rcMain"[^>]*>', src)
     a = m.end(); b = src.index("</script>", a)
     head, main_js, tail = src[:a], src[a:b], src[b:]
     w = re.search(r'(<script[^>]*id="rcWorker"[^>]*>)(.*?)(</script>)', tail, re.S)
     W = json.loads(w.group(2))
-
-    # modifiche al codice principale, con riallineamento dei tratti del worker
     edits = []
     for old, new in MAIN:
         n = main_js.count(old)
         if n != 1:
-            sys.exit(f"Testo da modificare trovato {n} volte (atteso 1):\n{old[:120]}")
+            raise SystemExit(f"Testo da modificare trovato {n} volte (atteso 1):\n{old[:120]}")
         edits.append((main_js.index(old), old, new))
     bounds = [x for r in W["ranges"] for x in r]
     for p, old, new in edits:
         for x in bounds:
             if p < x < p + len(old):
-                sys.exit(f"Un confine del worker cade dentro una modifica (pos {x}).")
+                raise SystemExit(f"Un confine del worker cade dentro una modifica (pos {x}).")
     old_core = "\n".join(main_js[s:e] for s, e in W["ranges"])
     new_ranges = []
     for s, e in W["ranges"]:
@@ -105,24 +100,30 @@ def main():
         main_js = main_js[:p] + new + main_js[p + len(old):]
     W["ranges"] = new_ranges
     new_core = "\n".join(main_js[s:e] for s, e in new_ranges)
-    # controllo: il codice del worker cambia solo dove l'abbiamo modificato
     exp = old_core
     for p, old, new in edits:
         if old in exp:
             exp = exp.replace(old, new, 1)
     if exp != new_core:
-        sys.exit("Controllo fallito: il codice del worker non corrisponde dopo il riallineamento.")
+        raise SystemExit("Controllo fallito: il codice del worker non corrisponde dopo il riallineamento.")
     nel_worker = sum(1 for p, old, new in edits if old in old_core)
-
     tail = tail[:w.start(2)] + json.dumps(W, ensure_ascii=False, separators=(",", ":")) + tail[w.end(2):]
     out = head + main_js + tail
     for old, new in HTML:
         n = out.count(old)
         if n != 1:
-            sys.exit(f"Testo HTML trovato {n} volte (atteso 1):\n{old[:120]}")
+            raise SystemExit(f"Testo HTML trovato {n} volte (atteso 1):\n{old[:120]}")
         out = out.replace(old, new)
+    print(f"OK {nome}: {len(MAIN)} modifiche al codice ({nel_worker} nel calcolo parallelo), {len(HTML)} all'interfaccia")
+    return out
+
+
+def main():
+    if len(sys.argv) != 3:
+        sys.exit(__doc__)
+    src = open(sys.argv[1], encoding="utf-8").read()
+    out = applica(src, HTML, MAIN, 'name="dtipo"', "tipo di moncone")
     open(sys.argv[2], "w", encoding="utf-8").write(out)
-    print(f"OK: {len(MAIN)} modifiche al codice ({nel_worker} nel calcolo parallelo), {len(HTML)} all'interfaccia → {sys.argv[2]}")
 
 
 if __name__ == "__main__":

@@ -29,6 +29,7 @@ Indirizzo previsto: **https://amplatzlukas.com/rotoclick-studio/**
 | `assets/` | Codice dell'accesso (`rc-api.js`), finestre (`rc-ui.*`), controllo export (`rc-gate.js`), back-end (`gestione.*`) |
 | `supabase/schema.sql` | Il database: tabelle, regole di accesso, tutte le funzioni |
 | `strumenti/integra.py` | Inserisce login e controllo export in una nuova versione del tool |
+| `strumenti/patch_monconi.py`, `strumenti/patch_ortho.py` | Modifiche al tool: tipo di moncone (classico / binari / click) e base Ortho Tweed. Già applicate alla versione 25 |
 | `strumenti/lingue.py` | Dizionario italiano / tedesco / inglese (genera `assets/rc-lang-data.js`) |
 | `assets/rc-i18n.js` | Tendina della lingua e traduzione della pagina |
 | `assets/anteprima-*` | Solo per la modalità anteprima (database finto nel browser) |
@@ -106,3 +107,21 @@ Lo script riscrive `index.html` con login, voucher e controllo export. Il codice
   - **Nuove versioni del tool:** le frasi nuove restano in italiano finché non le aggiungi al dizionario. Aggiungi la riga `("italiano", "deutsch", "english")` in `strumenti/lingue.py` (con `{0}`, `{1}` per numeri e nomi) e lancia `python3 strumenti/lingue.py`.
   - Restano in italiano le etichette del cubo di vista 3D (DAVANTI, DIETRO…), perché il tool le disegna dentro la scena 3D, e la parola "triangoli" accanto al nome del file caricato, perché il tool rilegge quel testo.
   - Le email di Supabase (conferma, recupero password) vanno tradotte nei modelli email di Supabase.
+
+## 6. Modifiche al tool (versione 25)
+
+La versione del tool inserita qui è la **25**, cioè la 23 con queste due aggiunte:
+
+- **Tipo di moncone sfilabile** (`patch_monconi.py`): Classico (senza binari), Con binari, Con binari click.
+- **Base Ortho per il modello studio** (`patch_ortho.py`): zoccolo squadrato Tweed/ABO. Il retro è perpendicolare alla linea mediana, i lati sono a 65° (sup.) e 55° (inf.), i talloni smussati; il superiore è a punta, l'inferiore arrotondato da canino a canino.
+  - Il piano dello zoccolo è proposto al fornice (altezza mediana del bordo della scansione) e si sposta in mm.
+  - Il palato resta anatomico: lo zoccolo copre solo l'esterno dell'arcata e, sotto, lo spazio della lingua.
+  - Con il nido d'ape anche lo zoccolo viene alleggerito; con Ortho le opzioni sono solo Nido d'ape e Pieno (Cavo non c'è).
+
+Le nuove versioni del tool vanno fatte partendo dalla 25, altrimenti queste funzioni spariscono. In alternativa si rilanciano i due script su una nuova versione:
+```bash
+python3 strumenti/patch_monconi.py tool-nuovo.html tmp.html
+python3 strumenti/patch_ortho.py tmp.html tool-con-modifiche.html
+python3 strumenti/integra.py tool-con-modifiche.html
+```
+Se il codice del tool è cambiato proprio nei punti modificati, gli script si fermano e dicono quale testo non trovano.

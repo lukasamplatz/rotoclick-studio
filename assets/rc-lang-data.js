@@ -1046,6 +1046,56 @@ window.RC_LANG_DATA = [
 "Infill"
 ],
 [
+"Base",
+"Sockel",
+"Base"
+],
+[
+"Standard",
+"Standard",
+"Standard"
+],
+[
+"Ortho (Tweed)",
+"Ortho (Tweed)",
+"Ortho (Tweed)"
+],
+[
+"Piano dello zoccolo dal fornice",
+"Sockelebene ab Umschlagfalte",
+"Base plane from the fornix"
+],
+[
+"Distanza dall'arcata",
+"Abstand zum Zahnbogen",
+"Distance from the arch"
+],
+[
+"Proposto al fornice: + = zoccolo più alto (copre più gengiva), − = più basso",
+"An der Umschlagfalte vorgeschlagen: + = höherer Sockel (deckt mehr Gingiva), − = niedriger",
+"Proposed at the fornix: + = higher base (covers more gingiva), − = lower"
+],
+[
+"Zoccolo squadrato Tweed/ABO: retro perpendicolare alla linea mediana, lati a 65° (sup.) e 55° (inf.), talloni smussati; superiore a punta, inferiore arrotondato da canino a canino. Il piano dello zoccolo è proposto al fornice e si sposta in mm.",
+"Eckiger Sockel nach Tweed/ABO: Rückseite senkrecht zur Mittellinie, Seiten 65° (OK) und 55° (UK), Fersen abgeschrägt; OK spitz, UK von Eckzahn zu Eckzahn gerundet. Die Sockelebene wird an der Umschlagfalte vorgeschlagen und lässt sich in mm verschieben.",
+"Squared Tweed/ABO base: back perpendicular to the midline, sides at 65° (upper) and 55° (lower), bevelled heels; upper pointed, lower rounded from canine to canine. The base plane is proposed at the fornix and can be moved in mm."
+],
+[
+"senza monconi, base standard o Ortho",
+"ohne Stümpfe, Standard- oder Ortho-Sockel",
+"without dies, standard or Ortho base"
+],
+[
+"zoccolo Ortho: piano a {0} mm dalla piastra (fornice {1} mm)",
+"Ortho-Sockel: Ebene {0} mm von der Platte (Umschlagfalte {1} mm)",
+"Ortho base: plane {0} mm from the plate (fornix {1} mm)"
+],
+[
+"zoccolo Ortho: piano a {0} mm dalla piastra (fornice {1} mm), palato mantenuto",
+"Ortho-Sockel: Ebene {0} mm von der Platte (Umschlagfalte {1} mm), Gaumen erhalten",
+"Ortho base: plane {0} mm from the plate (fornix {1} mm), palate kept"
+],
+[
 "Nido d'ape",
 "Wabe",
 "Honeycomb"
@@ -1579,6 +1629,11 @@ window.RC_LANG_DATA = [
 "Modelli {0} {1} pronti. Resina: sup",
 "Modelle {0} {1} fertig. Harz: OK",
 "{1} models {0} ready. Resin: upper"
+],
+[
+"Modelli {0} / {1} {2} pronti. Resina: sup",
+"Modelle {0} / {1} {2} fertig. Harz: OK",
+"{2} models {0} / {1} ready. Resin: upper"
 ],
 [
 "pieni",
@@ -3101,6 +3156,11 @@ window.RC_LANG_DATA = [
 "Done"
 ],
 [
+"Fine",
+"Fertig",
+"Done"
+],
+[
 "Incolla almeno un codice.",
 "Mindestens einen Code einfügen.",
 "Paste at least one code."
@@ -3422,3 +3482,4 @@ window.RC_LANG_DATA = [
 ]
 ];
 window.RC_LANG_INLINE = [["+ IVA", "+ MwSt.", "+ VAT"]];
+window.RC_LANG_PREFIX = [["Sup: ", "OK: ", "Upper: "], ["Inf: ", "UK: ", "Lower: "]];

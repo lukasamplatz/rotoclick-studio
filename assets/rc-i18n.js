@@ -37,7 +37,7 @@
         if (tr == null || tr === "") return;
         if (/\{\d\}/.test(it)) {
           const ordine = [];
-          const re = new RegExp("^" + escRe(it).replace(/\\\{(\d)\\\}/g, (_, n) => { ordine.push(+n); return "(.+?)"; }) + "$");
+          const re = new RegExp("^" + escRe(it).replace(/\\\{(\d)\\\}/g, (_, n) => { ordine.push(+n); return "((?:(?! · ).)+?)"; }) + "$");   // un valore non attraversa " · "
           MODELLI[l].push({ re, ordine, tr, fissi: it.replace(/\{\d\}/g, "").length });
         } else ESATTE[l].set(it, tr);
       });
@@ -47,23 +47,25 @@
   }
   carica(window.RC_LANG_DATA || []);
   const IN_LINEA = (window.RC_LANG_INLINE || []).map((r) => ({ it: r[0], de: r[1], en: r[2] }));
+  const PREFISSI = (window.RC_LANG_PREFIX || []).map((r) => ({ it: r[0], de: r[1], en: r[2] }));
 
   // valore variabile dentro una frase: traduzione esatta, altrimenti sostituzioni in linea (es. "+ IVA")
-  function valore(v, l) {
+  function valore(v, l, prof) {
     const e = ESATTE[l].get(norm(v));
     if (e != null) return e;
+    if ((prof || 0) < 3) { const r = unaFrase(norm(v), l, (prof || 0) + 1); if (r != null) return r; }
     let s = v;
     for (const r of IN_LINEA) if (s.indexOf(r.it) >= 0) s = s.split(r.it).join(r[l]);
     return s;
   }
 
-  function unaFrase(t, l) {
+  function unaFrase(t, l, prof) {
     const e = ESATTE[l].get(t);
     if (e != null) return e;
     for (const m of MODELLI[l]) {
       const x = m.re.exec(t);
       if (!x) continue;
-      const val = {}; m.ordine.forEach((n, i) => { val[n] = valore(x[i + 1], l); });
+      const val = {}; m.ordine.forEach((n, i) => { val[n] = valore(x[i + 1], l, prof); });
       return m.tr.replace(/\{(\d)\}/g, (_, n) => (val[n] != null ? val[n] : ""));
     }
     return null;
@@ -88,6 +90,8 @@
       const out = parti.map((p) => { const x = trad(p, l, false, livello + 1); if (x != null) { ok = true; return x; } return p; });
       if (ok) return out.join(sep.source === " · " ? " · " : " ");
     }
+    // nota con prefisso ("Sup: …", "Inf: …"): si traduce il resto
+    for (const pf of PREFISSI) if (t.startsWith(pf.it)) { const x = trad(t.slice(pf.it.length), l, false, livello + 1); if (x != null) return pf[l] + x; }
     return null;
   }
 
