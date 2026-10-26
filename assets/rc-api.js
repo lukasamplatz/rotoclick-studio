@@ -103,14 +103,14 @@
       if (!demo.rows[0].n) {
         await db.exec(`
           insert into rivenditori (nome, piva, email, paese) values ('Rivenditore Demo S.r.l.', 'IT00000000001', 'rivenditore@anteprima.it', 'IT');
-          insert into inviti (email, ruolo, nome) values ('admin@anteprima.it', 'admin', 'Admin Dentag'), ('agente@anteprima.it', 'agente', 'Agente Demo') on conflict do nothing;
+          insert into inviti (email, ruolo, nome) values ('admin@anteprima.it', 'admin', 'Admin Dentag') on conflict do nothing;
           insert into inviti (email, ruolo, rivenditore_id, nome)
             select 'rivenditore@anteprima.it', 'rivenditore', id, 'Titolare Demo' from rivenditori where nome = 'Rivenditore Demo S.r.l.' on conflict do nothing;
           insert into auth.users (email, anteprima_password) values
-            ('admin@anteprima.it', '${PW}'), ('rivenditore@anteprima.it', '${PW}'), ('agente@anteprima.it', '${PW}') on conflict do nothing;
+            ('admin@anteprima.it', '${PW}'), ('rivenditore@anteprima.it', '${PW}') on conflict do nothing;
           select set_config('request.jwt.claim.sub', (select id::text from auth.users where email = 'admin@anteprima.it'), false);
           select admin_genera_codici(4, 'K-LAB', (select id from rivenditori where nome = 'Rivenditore Demo S.r.l.'), null, 'DEMO');
-          select admin_genera_codici(2, 'K-CLINIC', _dentag_id(), (select user_id from profili where email = 'agente@anteprima.it'), 'DEMO');
+          select admin_genera_codici(2, 'K-CLINIC', _dentag_id(), null, 'DEMO');
           select set_config('request.jwt.claim.sub', '', false);`);
       }
     })();

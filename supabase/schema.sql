@@ -555,7 +555,7 @@ declare em text := lower(trim(p_email)); v_riv uuid; esiste profili;
 begin
   if not _solo_admin() then return _err('Accesso non consentito'); end if;
   if em !~ '^[^@\s]+@[^@\s]+\.[^@\s]+$' then return _err('Email non valida'); end if;
-  if p_ruolo not in ('admin','rivenditore','agente') then return _err('Ruolo non valido'); end if;
+  if p_ruolo not in ('admin','rivenditore') then return _err('Ruolo non valido'); end if;
   v_riv := case when p_ruolo = 'rivenditore' then p_rivenditore else coalesce(p_rivenditore, _dentag_id()) end;
   if p_ruolo = 'rivenditore' and v_riv is null then return _err('Scegli il rivenditore'); end if;
 

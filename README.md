@@ -1,6 +1,6 @@
 # RotoClick Studio
 
-Tool nel browser per i modelli RotoClick (Key Lab / Key Clinic), con registrazione dei laboratori, codici dei kit (voucher), conteggio degli export e back-end per Dentag, rivenditori e agenti.
+Tool nel browser per i modelli RotoClick (Key Lab / Key Clinic), con registrazione dei laboratori, codici dei kit (voucher), conteggio degli export e back-end per Dentag e rivenditori.
 
 Indirizzo previsto: **https://amplatzlukas.com/rotoclick-studio/**
 
@@ -15,7 +15,7 @@ Indirizzo previsto: **https://amplatzlukas.com/rotoclick-studio/**
    - il **primo** codice collega il laboratorio al rivenditore a cui era assegnato quel codice.
    Un codice vale una volta sola e funziona solo se assegnato a un rivenditore attivo: è la garanzia che il kit è originale e venduto da un rivenditore abilitato.
 3. **Export.** A ogni export compare un pop-up: "caso incluso" oppure "2,00 € + IVA, addebitato da [rivenditore] a fine mese". Solo dopo la conferma il server registra l'export e parte il download. Ogni export è un caso (non esistono riesportazioni gratuite).
-4. **Fine mese.** Dentag fattura a ogni rivenditore 1 € per export a pagamento. Il rivenditore fattura 2 € ai suoi clienti, usando il riepilogo per laboratorio. I clienti diretti e quelli degli agenti li fattura Dentag a 2 €.
+4. **Fine mese.** Dentag fattura a ogni rivenditore 1 € per export a pagamento. Il rivenditore fattura 2 € ai suoi clienti, usando il riepilogo per laboratorio. I clienti diretti (kit venduti da Dentag) li fattura Dentag a 2 €.
 
 **Privacy:** scansioni e casi restano sul PC del laboratorio. Il server riceve solo i dati del laboratorio e, per ogni export, data e ora, tipo e importo.
 
@@ -24,7 +24,7 @@ Indirizzo previsto: **https://amplatzlukas.com/rotoclick-studio/**
 | File | Cosa contiene |
 | --- | --- |
 | `index.html` | Il tool, con login, voucher e pop-up di export già inseriti |
-| `gestione/index.html` | Back-end per Dentag (admin), rivenditori e agenti |
+| `gestione/index.html` | Back-end per Dentag (admin) e rivenditori |
 | `config.js` | Collegamento a Supabase, testo del prezzo, link a condizioni e privacy |
 | `assets/` | Codice dell'accesso (`rc-api.js`), finestre (`rc-ui.*`), controllo export (`rc-gate.js`), back-end (`gestione.*`) |
 | `supabase/schema.sql` | Il database: tabelle, regole di accesso, tutte le funzioni |
@@ -42,7 +42,7 @@ Con `config.js` vuoto il sito parte in **modalità anteprima**: un database fint
 3. Settings → Pages → *Deploy from a branch* → `main` / `(root)` → Save.
 4. Se amplatzlukas.com è il dominio personalizzato del sito utente (`<utente>.github.io`), il repository appare da solo su **amplatzlukas.com/rotoclick-studio/**. Se invece il sito è un unico repository, copia questi file in una cartella `rotoclick-studio/` di quel repository.
 
-Account di prova in anteprima (password `anteprima`): `admin@anteprima.it`, `rivenditore@anteprima.it`, `agente@anteprima.it`. I codici di prova sono nella barra "Modalità anteprima" in basso.
+Account di prova in anteprima (password `anteprima`): `admin@anteprima.it`, `rivenditore@anteprima.it`. I codici di prova sono nella barra "Modalità anteprima" in basso.
 
 ## 2. Andare live con Supabase
 
@@ -72,14 +72,13 @@ Account di prova in anteprima (password `anteprima`): `admin@anteprima.it`, `riv
 
 | Chi | Cosa fa |
 | --- | --- |
-| **Dentag (admin)** | Crea i rivenditori, abilita le email di rivenditori/agenti/admin (**Accessi**), genera o importa i codici e li assegna (**Codici kit**), vede il riepilogo per rivenditore, storna export sbagliati, chiude il mese, cambia prezzo/quote/casi inclusi (**Impostazioni**) |
+| **Dentag (admin)** | Crea i rivenditori, abilita le email di rivenditori e admin (**Accessi**), genera o importa i codici e li assegna (**Codici kit**), vede il riepilogo per rivenditore, storna export sbagliati, chiude il mese, cambia prezzo/quote/casi inclusi (**Impostazioni**) |
 | **Rivenditore** | Vede i suoi clienti (i nuovi sono segnalati), li blocca se non pagano, vede i suoi codici, scarica il riepilogo del mese per fatturare |
-| **Agente Dentag** | Vede solo i clienti collegati con i codici a lui assegnati e i loro export |
 
 **Codici dei kit**
 - *Genera codici*: codici casuali `RK-XXXX-XXXX` (senza 0/O e 1/I), con il CSV da usare per le etichette.
 - *Importa codici esistenti*: per i kit già in giro con un codice stampato. Spazi e trattini non contano.
-- Un codice funziona solo quando è **assegnato a un rivenditore**. I kit venduti direttamente vanno a "Dentag Italia S.r.l.", con l'eventuale agente.
+- Un codice funziona solo quando è **assegnato a un rivenditore**. I kit venduti direttamente vanno a "Dentag Italia S.r.l.".
 
 **Fine mese:** *Riepilogo mese* → scegli il mese → *Scarica (CSV)* → fatture. Dentag fattura la colonna "Da fatturare al rivenditore"; per i clienti diretti clicca la riga Dentag. Dopo la fatturazione usa **Chiudi il mese**: da quel momento gli export di quel mese non si possono più stornare.
 
